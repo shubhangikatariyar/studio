@@ -1,15 +1,28 @@
 import Link from 'next/link';
-import { MountainSnow } from 'lucide-react'; // Using a generic icon for branding
+import { Button } from '@/components/ui/button';
 
 export function AppHeader() {
   return (
-    <header className="border-b bg-card shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-xl font-semibold hover:text-primary transition-colors">
-          <MountainSnow className="h-6 w-6 text-primary" />
-          My Showcase
+        <Link href="/" className="text-xl font-semibold hover:text-primary transition-colors">
+          Shubhangi Katariyar
         </Link>
-        {/* Future: Navigation items or theme toggle can be added here */}
+        <nav className="hidden md:flex items-center space-x-4">
+          <Button variant="ghost" asChild>
+            <Link href="#education">Education</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="#experience">Experience</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="#projects">Projects</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="#connect">Connect</Link>
+          </Button>
+        </nav>
+        {/* TODO: Add mobile navigation menu */}
       </div>
     </header>
   );

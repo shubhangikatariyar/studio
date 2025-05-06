@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'My Showcase - Portfolio',
-  description: 'A personal portfolio showcasing projects and skills.',
+  title: 'Shubhangi Katariyar - AI Engineer Portfolio',
+  description: 'Portfolio of Shubhangi Katariyar, showcasing AI/ML projects, education, and experience.',
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}>
         <TooltipProvider>
           {children}
