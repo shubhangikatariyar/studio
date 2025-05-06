@@ -16,3 +16,21 @@ export interface Project {
   demoUrl?: string;
   codeUrl?: string;
 }
+
+export interface EducationEntry {
+  id: string;
+  university: string;
+  degree: string;
+  specialization?: string;
+  dates: string;
+  logoUrl?: string; 
+}
+
+export interface ExperienceEntry {
+  id: string;
+  company: string;
+  role: string;
+  dates: string;
+  description?: string[]; // Array of responsibilities/achievements
+  logoUrl?: string; 
+}

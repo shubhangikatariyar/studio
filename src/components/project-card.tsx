@@ -17,13 +17,13 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
       <CardHeader>
-        <CardTitle className="text-2xl font-semibold">{project.title}</CardTitle>
-        <CardDescription className="text-sm text-muted-foreground min-h-[3em] line-clamp-2">{project.description}</CardDescription>
+        <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
+        {/* Short description can be part of the main description now or kept minimal here */}
       </CardHeader>
-      <CardContent className="flex-grow">
-        <div className="relative aspect-video w-full mb-4 rounded-md overflow-hidden">
+      <CardContent className="flex-grow flex flex-col">
+        <div className="relative aspect-[16/10] w-full mb-4 rounded-md overflow-hidden">
           <Image
             src={project.imageUrl}
             alt={project.title}
@@ -33,17 +33,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
             data-ai-hint={project.imageHint}
           />
         </div>
-        <p className="text-muted-foreground text-base line-clamp-3">{project.description}</p>
+        <CardDescription className="text-muted-foreground text-sm line-clamp-4 flex-grow">{project.description}</CardDescription>
       </CardContent>
-      <CardFooter className="flex flex-col sm:flex-row justify-end gap-2 pt-4 border-t">
-        {project.demoUrl && (
+      <CardFooter className="flex flex-col sm:flex-row justify-end gap-2 pt-4 border-t mt-auto">
+        {project.demoUrl && project.demoUrl !== '#' && (
           <Button variant="outline" asChild className="w-full sm:w-auto">
             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" /> View Demo
             </a>
           </Button>
         )}
-        {project.codeUrl && (
+        {project.codeUrl && project.codeUrl !== '#' && (
           <Button variant="default" asChild className="w-full sm:w-auto">
             <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
               <Code className="mr-2 h-4 w-4" /> View Code
