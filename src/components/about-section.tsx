@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import FloatingNetworkBackground from './floating-network-background';
 
 const profileData = {
   name: 'Shubhangi Katariyar',
@@ -12,8 +13,9 @@ export function AboutSection() {
   const { name, profileImageUrl, aboutMeParagraph } = profileData;
 
   return (
-    <section id="about" className="py-16 bg-muted">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="about" className="relative py-16 bg-muted overflow-hidden">
+      <FloatingNetworkBackground />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-0">
         <div className="mb-8 flex flex-col items-center">
           <Avatar className="w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 border-4 border-primary shadow-xl mb-4">
             <AvatarImage src={profileImageUrl} alt={name} data-ai-hint="professional portrait woman" />
