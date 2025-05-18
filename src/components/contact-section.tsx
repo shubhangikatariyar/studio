@@ -1,5 +1,5 @@
 
-import { Linkedin, Github, Mail, Download } from 'lucide-react';
+import { Linkedin, Github, Mail, Download, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { SocialLink } from '@/types';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -7,7 +7,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 const socialLinks: SocialLink[] = [
   { platform: 'LinkedIn', url: 'https://in.linkedin.com/in/shubhangi-katariyar', icon: Linkedin, ariaLabel: "Shubhangi Katariyar's LinkedIn Profile" },
   { platform: 'GitHub', url: 'https://github.com/shubhangikatariyar', icon: Github, ariaLabel: "Shubhangi Katariyar's GitHub Profile" },
-  { platform: 'University Email', url: 'mailto:katariyar@wisc.edu', icon: Mail, ariaLabel: "Email Shubhangi Katariyar (WISC)" },
+  { platform: 'Twitter', url: '#', icon: Twitter, ariaLabel: "Shubhangi Katariyar's Twitter Profile" }, // Placeholder URL
 ];
 
 const contactProfileData = {
@@ -54,10 +54,9 @@ export function ContactSection() {
           ))}
         </div>
         <p className="text-muted-foreground">
-          Feel free to reach out via personal email: <a href="mailto:katariyar.shubhangi@gmail.com" className="text-primary hover:underline">katariyar.shubhangi@gmail.com</a>
+          Feel free to reach out via email: <a href="mailto:katariyar.shubhangi@gmail.com" className="text-primary hover:underline">katariyar.shubhangi@gmail.com</a>
         </p>
       </div>
     </section>
   );
 }
-
