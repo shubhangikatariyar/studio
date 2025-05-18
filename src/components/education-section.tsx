@@ -16,7 +16,7 @@ const educationData: EducationEntry[] = [
     id: '2',
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
-    minor: 'Minor in Data Science',
+    // minor: 'Minor in Data Science', // Removed this line
     dates: 'Aug 2018 - May 2022',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/en/7/7a/University_of_Mumbai_coat_of_arms.svg',
   },
