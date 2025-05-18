@@ -17,9 +17,9 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group bg-card/90 dark:bg-card/80">
       <CardHeader>
-        <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
+        <CardTitle className="text-xl font-semibold text-card-foreground">{project.title}</CardTitle>
         {/* Short description can be part of the main description now or kept minimal here */}
       </CardHeader>
       <CardContent className="flex-grow flex flex-col">
@@ -35,7 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <CardDescription className="text-muted-foreground text-sm line-clamp-4 flex-grow">{project.description}</CardDescription>
       </CardContent>
-      <CardFooter className="flex flex-col sm:flex-row justify-end gap-2 pt-4 border-t mt-auto">
+      <CardFooter className="flex flex-col sm:flex-row justify-end gap-2 pt-4 border-t border-border/50 mt-auto">
         {project.demoUrl && project.demoUrl !== '#' && (
           <Button variant="outline" asChild className="w-full sm:w-auto">
             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
