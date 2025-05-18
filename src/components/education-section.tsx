@@ -17,7 +17,7 @@ const educationData: EducationEntry[] = [
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
     dates: 'Aug 2018 - May 2022',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/University_of_Mumbai_coat_of_arms.svg',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/en/7/7a/University_of_Mumbai_coat_of_arms.svg',
   },
 ];
 
@@ -38,7 +38,7 @@ export function EducationSection() {
                   <CardDescription className="text-md text-primary mt-1">{entry.degree}</CardDescription>
                 </div>
                 {entry.logoUrl && (
-                  <div className={`w-36 h-36 md:w-48 md:h-48 rounded-full ${entry.university === 'University of Wisconsin, Madison' ? 'p-2' : 'p-4'} bg-white border border-border flex items-center justify-center self-center sm:self-auto shadow-xl flex-shrink-0`}>
+                  <div className={`w-36 h-36 md:w-48 md:h-48 rounded-full bg-white border border-border flex items-center justify-center self-center sm:self-auto shadow-xl flex-shrink-0 ${entry.university === 'University of Wisconsin, Madison' ? 'p-2' : 'p-4'}`}>
                     <img
                       src={entry.logoUrl}
                       alt={`${entry.university} logo`}
@@ -67,3 +67,4 @@ export function EducationSection() {
     </section>
   );
 }
+
