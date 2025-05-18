@@ -28,17 +28,17 @@ export function EducationSection() {
         <span role="img" aria-label="Graduation cap emoji" className="mr-2">🎓</span>
         Education
       </h2>
-      <div className="space-y-6">
+      <div className="space-y-8">
         {educationData.map((entry) => (
-          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300">
+          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
             <CardHeader>
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-6"> {/* Increased gap */}
                 <div className="flex-grow">
-                  <CardTitle className="text-xl md:text-2xl font-semibold">{entry.university}</CardTitle>
-                  <CardDescription className="text-md text-primary">{entry.degree}</CardDescription>
+                  <CardTitle className="text-xl md:text-2xl font-semibold text-foreground">{entry.university}</CardTitle>
+                  <CardDescription className="text-md text-primary mt-1">{entry.degree}</CardDescription>
                 </div>
                 {entry.logoUrl && (
-                  <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-lg p-3 bg-muted flex items-center justify-center self-center sm:self-start shadow-md">
+                  <div className="w-36 h-36 md:w-40 md:h-40 rounded-full p-4 bg-white border border-border flex items-center justify-center self-center sm:self-auto shadow-xl flex-shrink-0">
                     <img
                       src={entry.logoUrl}
                       alt={`${entry.university} logo`}
