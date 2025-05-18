@@ -13,13 +13,12 @@ export default function HomePage() {
     <div
       className="flex flex-col min-h-screen relative"
       style={{
-        backgroundImage: "url('https://placehold.co/1920x1080/2c2c2c/e0e0e0/png?text=Neural+Net+BG')",
+        backgroundImage: "url('https://source.unsplash.com/s5C_4tMY8fA/1920x1080')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
       }}
-      data-ai-hint="abstract technology background"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
