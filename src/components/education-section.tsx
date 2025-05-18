@@ -41,7 +41,7 @@ export function EducationSection() {
                   <img 
                     src={entry.logoUrl} 
                     alt={`${entry.university} logo`} 
-                    className="w-40 h-40 sm:w-48 sm:h-48 rounded-md object-contain self-center sm:self-start" 
+                    className="w-48 h-48 sm:w-56 sm:h-56 rounded-md object-contain self-center sm:self-start" 
                     data-ai-hint="university logo"
                   />
                 )}
