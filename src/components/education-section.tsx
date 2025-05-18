@@ -10,14 +10,14 @@ const educationData: EducationEntry[] = [
     degree: "Master's in Electrical and Computer Engineering",
     specialization: 'Machine Learning and Signal Processing',
     dates: 'Aug 2025 - Dec 2026',
-    logoUrl: 'https://placehold.co/40x40.png',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Uw-logo.png',
   },
   {
     id: '2',
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
     dates: 'Aug 2018 - May 2022',
-    logoUrl: 'https://placehold.co/40x40.png',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/University_of_Mumbai_wordmark.svg',
   },
 ];
 
