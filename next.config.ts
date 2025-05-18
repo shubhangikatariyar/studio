@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         hostname: 'upload.wikimedia.org',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.wikia.nocookie.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
