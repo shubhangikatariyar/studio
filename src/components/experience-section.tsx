@@ -50,7 +50,7 @@ export function ExperienceSection() {
                   </CardDescription>
                 </div>
                 {entry.logoUrl && (
-                  <div className="w-36 h-auto sm:w-40 md:w-48 bg-white p-3 rounded-lg shadow-lg border border-border flex items-center justify-center self-center sm:self-auto flex-shrink-0">
+                  <div className="w-32 h-auto sm:w-36 md:w-44 bg-white p-1 rounded-lg shadow-lg border border-border flex items-center justify-center self-center sm:self-auto flex-shrink-0">
                     <img
                       src={entry.logoUrl}
                       alt={`${entry.company} logo`}
