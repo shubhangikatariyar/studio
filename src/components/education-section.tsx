@@ -1,7 +1,7 @@
 
 import type { EducationEntry } from '@/types';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
-import { Briefcase, CalendarDays, GraduationCap } from 'lucide-react';
+import { Briefcase, CalendarDays } from 'lucide-react';
 
 const educationData: EducationEntry[] = [
   {
@@ -38,12 +38,14 @@ export function EducationSection() {
                   <CardDescription className="text-md text-primary">{entry.degree}</CardDescription>
                 </div>
                 {entry.logoUrl && (
-                  <img 
-                    src={entry.logoUrl} 
-                    alt={`${entry.university} logo`} 
-                    className="w-48 h-48 sm:w-56 sm:h-56 rounded-md object-contain self-center sm:self-start" 
-                    data-ai-hint="university logo"
-                  />
+                  <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-lg p-3 bg-muted flex items-center justify-center self-center sm:self-start shadow-md">
+                    <img
+                      src={entry.logoUrl}
+                      alt={`${entry.university} logo`}
+                      className="max-w-full max-h-full object-contain"
+                      data-ai-hint="university logo"
+                    />
+                  </div>
                 )}
               </div>
             </CardHeader>
