@@ -24,6 +24,9 @@ const FloatingNetworkBackground = () => {
   const [particles, setParticles] = useState<ParticleStyle[]>([]);
 
   useEffect(() => {
+    // This component is no longer used in AboutSection,
+    // but keeping it here in case it's needed elsewhere or for reference.
+    // If not needed, it can be deleted.
     const newParticles: ParticleStyle[] = [];
     for (let i = 0; i < NUM_PARTICLES; i++) {
       const startOpacity = Math.random() * 0.2 + 0.3; // Range 0.3 to 0.5
@@ -47,7 +50,6 @@ const FloatingNetworkBackground = () => {
     setParticles(newParticles);
   }, []);
 
-  // Memoize particles to prevent re-renders unless particles array changes
   const memoizedParticles = useMemo(() => particles.map((style) => (
     <div
       key={style.id}
