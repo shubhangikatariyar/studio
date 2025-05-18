@@ -1,7 +1,7 @@
 
 import type { EducationEntry } from '@/types';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
-import { Briefcase, CalendarDays } from 'lucide-react'; // Using Briefcase as a stand-in for GraduationCap which is not in Lucide
+import { Briefcase, CalendarDays, GraduationCap } from 'lucide-react';
 
 const educationData: EducationEntry[] = [
   {
@@ -25,6 +25,7 @@ export function EducationSection() {
   return (
     <section id="education" aria-labelledby="education-title" className="py-8">
       <h2 id="education-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
+        <span role="img" aria-label="Graduation cap emoji" className="mr-2">🎓</span>
         Education
       </h2>
       <div className="space-y-6">
@@ -42,7 +43,7 @@ export function EducationSection() {
             <CardContent>
               {entry.specialization && (
                 <p className="text-muted-foreground mb-1 flex items-center">
-                  <Briefcase className="mr-2 h-4 w-4 text-primary" /> {/* Using Briefcase for specialization */}
+                  <Briefcase className="mr-2 h-4 w-4 text-primary" />
                   {entry.specialization}
                 </p>
               )}

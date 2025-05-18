@@ -22,7 +22,10 @@ export function AboutSection() {
           <h1 className="text-4xl md:text-5xl font-bold text-foreground">{name}</h1>
         </div>
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6">💼 About Me</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
+            <span role="img" aria-label="Briefcase emoji" className="mr-2">💼</span>
+            About Me
+          </h2>
           <p className="text-xl text-foreground mb-8 leading-relaxed max-w-3xl mx-auto text-left sm:text-center">
             {aboutMeParagraph}
           </p>
