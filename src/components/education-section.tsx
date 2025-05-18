@@ -17,7 +17,7 @@ const educationData: EducationEntry[] = [
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
     dates: 'Aug 2018 - May 2022',
-    logoUrl: 'https://static.wikia.nocookie.net/logopedia/images/f/fc/Mumbai_University.jpeg/revision/latest?cb=20200403192515',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/University_of_Mumbai_coat_of_arms.svg',
   },
 ];
 
@@ -41,7 +41,7 @@ export function EducationSection() {
                   <img 
                     src={entry.logoUrl} 
                     alt={`${entry.university} logo`} 
-                    className="w-36 h-36 sm:w-40 sm:h-40 rounded-md object-contain self-center sm:self-start" 
+                    className="w-40 h-40 sm:w-48 sm:h-48 rounded-md object-contain self-center sm:self-start" 
                     data-ai-hint="university logo"
                   />
                 )}
