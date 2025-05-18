@@ -13,13 +13,14 @@ export default function HomePage() {
     <div
       className="flex flex-col min-h-screen relative"
       style={{
-        backgroundImage: "url('https://placehold.co/1920x1080.png')", // Updated placeholder
+        // Updated to a local path. User needs to add 'background-image.jpg' to the 'public' folder.
+        backgroundImage: "url('/background-image.jpg')", 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
       }}
-      data-ai-hint="abstract network" // Added hint based on user image
+      data-ai-hint="abstract background" 
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
