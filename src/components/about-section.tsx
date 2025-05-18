@@ -23,7 +23,7 @@ export function AboutSection() {
         </div>
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6">💼 About Me</h2>
-          <p className="text-lg text-foreground mb-8 leading-relaxed max-w-3xl mx-auto text-left sm:text-center">
+          <p className="text-xl text-foreground mb-8 leading-relaxed max-w-3xl mx-auto text-left sm:text-center">
             {aboutMeParagraph}
           </p>
         </div>
