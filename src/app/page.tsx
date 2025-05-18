@@ -13,12 +13,13 @@ export default function HomePage() {
     <div
       className="flex flex-col min-h-screen relative"
       style={{
-        backgroundImage: "url('https://source.unsplash.com/s5C_4tMY8fA/1920x1080')",
+        backgroundImage: "url('https://placehold.co/1920x1080.png')", // Updated placeholder
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
       }}
+      data-ai-hint="abstract network" // Added hint based on user image
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
