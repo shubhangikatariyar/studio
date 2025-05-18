@@ -1,5 +1,5 @@
 
-import { Linkedin, Github, Download, Twitter } from 'lucide-react';
+import { Linkedin, Github, Download, Twitter, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { SocialLink } from '@/types';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -20,7 +20,7 @@ export function ContactSection() {
     <section id="contact" aria-labelledby="contact-title" className="py-12 bg-card/90 dark:bg-card/80 shadow-lg rounded-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 id="contact-title" className="text-3xl font-bold text-primary mb-8">
-          <span role="img" aria-label="Email emoji" className="mr-2 text-primary">📧</span>
+          <span role="img" aria-label="Envelope emoji" className="mr-2 text-primary">✉️</span>
           Contact Me
         </h2>
         <div className="mb-10">
