@@ -20,10 +20,10 @@ export default function HomePage() {
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
       }}
-      data-ai-hint="abstract background" 
+      data-ai-hint="abstract network" 
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      <div className="absolute inset-0 bg-black/80 z-0"></div>
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col min-h-screen">
