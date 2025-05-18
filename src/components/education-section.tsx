@@ -16,6 +16,7 @@ const educationData: EducationEntry[] = [
     id: '2',
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
+    minor: 'Minor in Data Science',
     dates: 'Aug 2018 - May 2022',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/en/7/7a/University_of_Mumbai_coat_of_arms.svg',
   },
@@ -54,6 +55,12 @@ export function EducationSection() {
                 <p className="text-muted-foreground mb-1 flex items-center">
                   <Briefcase className="mr-2 h-4 w-4 text-primary" />
                   {entry.specialization}
+                </p>
+              )}
+              {entry.minor && (
+                <p className="text-muted-foreground mb-1 flex items-center">
+                  <Briefcase className="mr-2 h-4 w-4 text-primary" />
+                  {entry.minor}
                 </p>
               )}
               <p className="text-muted-foreground flex items-center">

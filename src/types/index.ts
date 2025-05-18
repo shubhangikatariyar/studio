@@ -22,6 +22,7 @@ export interface EducationEntry {
   university: string;
   degree: string;
   specialization?: string;
+  minor?: string; // Added minor field
   dates: string;
   logoUrl?: string; 
 }
