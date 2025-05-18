@@ -14,7 +14,7 @@ const experienceData: ExperienceEntry[] = [
       'Designed and implemented machine learning models for predictive analytics.',
       'Collaborated with cross-functional teams to integrate AI into existing products.',
     ],
-    logoUrl: 'https://placehold.co/40x40.png',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Tata_Consultancy_Services_old_logo.svg',
   },
   {
     id: '2',
@@ -26,7 +26,7 @@ const experienceData: ExperienceEntry[] = [
       'Contributed to data preprocessing and feature engineering tasks.',
       'Researched and evaluated state-of-the-art NLP techniques.',
     ],
-    logoUrl: 'https://placehold.co/40x40.png',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Tata_Consultancy_Services_old_logo.svg',
   },
 ];
 
@@ -41,16 +41,25 @@ export function ExperienceSection() {
         {experienceData.map((entry) => (
           <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 bg-card/90 dark:bg-card/80">
             <CardHeader>
-               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                <CardTitle className="text-xl md:text-2xl font-semibold text-card-foreground">{entry.role}</CardTitle>
-                 {entry.logoUrl && (
-                  <img src={entry.logoUrl} alt={`${entry.company} logo`} className="w-10 h-10 rounded-full object-contain hidden sm:block" data-ai-hint="company logo"/>
+              <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
+                <div className="flex-grow">
+                  <CardTitle className="text-xl md:text-2xl font-semibold text-card-foreground">{entry.role}</CardTitle>
+                  <CardDescription className="text-md text-primary mt-1 flex items-center">
+                    <Building className="mr-2 h-4 w-4" />
+                    {entry.company}
+                  </CardDescription>
+                </div>
+                {entry.logoUrl && (
+                  <div className="w-36 h-auto sm:w-40 md:w-48 bg-white p-3 rounded-lg shadow-lg border border-border flex items-center justify-center self-center sm:self-auto flex-shrink-0">
+                    <img
+                      src={entry.logoUrl}
+                      alt={`${entry.company} logo`}
+                      className="max-w-full max-h-16 md:max-h-20 object-contain"
+                      data-ai-hint="company logo"
+                    />
+                  </div>
                 )}
               </div>
-              <CardDescription className="text-md text-primary flex items-center">
-                <Building className="mr-2 h-4 w-4" />
-                {entry.company}
-              </CardDescription>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-2 flex items-center">
