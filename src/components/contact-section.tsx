@@ -1,5 +1,5 @@
 
-import { Linkedin, Github, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { SocialLink } from '@/types';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -10,6 +10,11 @@ const socialLinks: SocialLink[] = [
   { platform: 'Email', url: 'mailto:shubhangik19@gmail.com', icon: Mail, ariaLabel: "Email Shubhangi Katariyar" },
 ];
 
+const contactProfileData = {
+  name: 'Shubhangi Katariyar',
+  resumeUrl: '/resume_shubhangi_katariyar.pdf',
+};
+
 export function ContactSection() {
   return (
     <section id="contact" aria-labelledby="contact-title" className="py-12 bg-card shadow-lg rounded-lg">
@@ -17,6 +22,14 @@ export function ContactSection() {
         <h2 id="contact-title" className="text-3xl font-bold text-foreground mb-8">
           Contact Me
         </h2>
+        <div className="mb-10">
+          <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+            <a href={contactProfileData.resumeUrl} download={`${contactProfileData.name.replace(/\s+/g, '_')}_Resume.pdf`}>
+              <Download className="mr-2 h-5 w-5" />
+              Download Resume
+            </a>
+          </Button>
+        </div>
         <div className="flex justify-center space-x-6 mb-8">
           {socialLinks.map((link) => (
             <Tooltip key={link.platform}>
