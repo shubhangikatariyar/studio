@@ -17,7 +17,7 @@ const educationData: EducationEntry[] = [
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
     dates: 'Aug 2018 - May 2022',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/University_of_Mumbai_wordmark.svg',
+    logoUrl: 'https://static.wikia.nocookie.net/logopedia/images/f/fc/Mumbai_University.jpeg/revision/latest',
   },
 ];
 
@@ -32,13 +32,20 @@ export function EducationSection() {
         {educationData.map((entry) => (
           <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardHeader>
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                <CardTitle className="text-xl md:text-2xl font-semibold">{entry.university}</CardTitle>
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div className="flex-grow">
+                  <CardTitle className="text-xl md:text-2xl font-semibold">{entry.university}</CardTitle>
+                  <CardDescription className="text-md text-primary">{entry.degree}</CardDescription>
+                </div>
                 {entry.logoUrl && (
-                  <img src={entry.logoUrl} alt={`${entry.university} logo`} className="w-10 h-10 rounded-full object-contain hidden sm:block" data-ai-hint="university logo"/>
+                  <img 
+                    src={entry.logoUrl} 
+                    alt={`${entry.university} logo`} 
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-md object-contain self-center sm:self-start" 
+                    data-ai-hint="university logo"
+                  />
                 )}
               </div>
-              <CardDescription className="text-md text-primary">{entry.degree}</CardDescription>
             </CardHeader>
             <CardContent>
               {entry.specialization && (
