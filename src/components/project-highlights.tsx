@@ -1,3 +1,4 @@
+
 import { ProjectCard } from './project-card';
 import type { Project } from '@/types';
 // import { Button } from '@/components/ui/button'; // Optional: for "Load More"
@@ -7,7 +8,7 @@ const projectsData: Project[] = [
     id: '1',
     title: 'AI-Powered Recommendation Engine',
     description: 'Developed a personalized recommendation system using collaborative filtering and deep learning techniques. This engine improved user engagement by 25% and demonstrated proficiency in Python, TensorFlow, and Scikit-learn.',
-    imageUrl: 'https://picsum.photos/seed/recommender/600/400',
+    imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'abstract network graph',
     demoUrl: '#', // Replace with actual demo link
     codeUrl: '#', // Replace with actual code link
@@ -16,7 +17,7 @@ const projectsData: Project[] = [
     id: '2',
     title: 'Natural Language Processing Chatbot',
     description: 'Built an intelligent chatbot for customer service automation, capable of understanding and responding to complex queries with 90% accuracy using NLTK, SpaCy, and Rasa.',
-    imageUrl: 'https://picsum.photos/seed/chatbotnlp/600/400',
+    imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'chatbot interface conversation',
     demoUrl: '#', // Replace with actual demo link
     codeUrl: '#', // Replace with actual code link
@@ -25,7 +26,7 @@ const projectsData: Project[] = [
     id: '3',
     title: 'Computer Vision Object Detection',
     description: 'Implemented a real-time object detection model for autonomous systems using YOLOv5 and OpenCV, achieving high precision in diverse environments for traffic monitoring.',
-    imageUrl: 'https://picsum.photos/seed/cvobject/600/400',
+    imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'object detection bounding',
     demoUrl: '#', // Replace with actual demo link
     codeUrl: '#', // Replace with actual code link

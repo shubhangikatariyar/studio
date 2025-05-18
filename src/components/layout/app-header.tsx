@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -8,7 +9,10 @@ export function AppHeader() {
         <Link href="/" className="text-xl font-semibold hover:text-primary transition-colors">
           Shubhangi Katariyar
         </Link>
-        <nav className="hidden md:flex items-center space-x-4">
+        <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <Button variant="ghost" asChild>
+            <Link href="#about">About</Link>
+          </Button>
           <Button variant="ghost" asChild>
             <Link href="#education">Education</Link>
           </Button>
@@ -19,7 +23,7 @@ export function AppHeader() {
             <Link href="#projects">Projects</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link href="#connect">Connect</Link>
+            <Link href="#contact">Contact</Link>
           </Button>
         </nav>
         {/* TODO: Add mobile navigation menu */}
