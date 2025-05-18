@@ -38,6 +38,7 @@ export function ProjectHighlights() {
   return (
     <section id="projects" aria-labelledby="project-highlights-title" className="py-8">
       <h2 id="project-highlights-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
+        <span role="img" aria-label="Sparkles emoji" className="mr-2">✨</span>
         Project Highlights
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
