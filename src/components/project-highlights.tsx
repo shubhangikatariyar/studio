@@ -37,7 +37,7 @@ const projectsData: Project[] = [
 export function ProjectHighlights() {
   return (
     <section id="projects" aria-labelledby="project-highlights-title" className="py-8">
-      <h2 id="project-highlights-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
+      <h2 id="project-highlights-title" className="text-3xl font-bold text-gray-100 mb-8 text-center md:text-left">
         <span role="img" aria-label="Sparkles emoji" className="mr-2">✨</span>
         Project Highlights
       </h2>

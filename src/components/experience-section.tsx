@@ -33,16 +33,16 @@ const experienceData: ExperienceEntry[] = [
 export function ExperienceSection() {
   return (
     <section id="experience" aria-labelledby="experience-title" className="py-8">
-      <h2 id="experience-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
+      <h2 id="experience-title" className="text-3xl font-bold text-gray-100 mb-8 text-center md:text-left">
         <span role="img" aria-label="Woman technologist emoji" className="mr-2">👩‍💻</span>
         Work Experience
       </h2>
       <div className="space-y-6">
         {experienceData.map((entry) => (
-          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300">
+          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 bg-card/90 dark:bg-card/80">
             <CardHeader>
                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                <CardTitle className="text-xl md:text-2xl font-semibold">{entry.role}</CardTitle>
+                <CardTitle className="text-xl md:text-2xl font-semibold text-card-foreground">{entry.role}</CardTitle>
                  {entry.logoUrl && (
                   <img src={entry.logoUrl} alt={`${entry.company} logo`} className="w-10 h-10 rounded-full object-contain hidden sm:block" data-ai-hint="company logo"/>
                 )}

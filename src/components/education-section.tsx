@@ -16,7 +16,6 @@ const educationData: EducationEntry[] = [
     id: '2',
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
-    // minor: 'Minor in Data Science', // Removed this line
     dates: 'Aug 2018 - May 2022',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/en/7/7a/University_of_Mumbai_coat_of_arms.svg',
   },
@@ -25,17 +24,17 @@ const educationData: EducationEntry[] = [
 export function EducationSection() {
   return (
     <section id="education" aria-labelledby="education-title" className="py-8">
-      <h2 id="education-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
+      <h2 id="education-title" className="text-3xl font-bold text-gray-100 mb-8 text-center md:text-left">
         <span role="img" aria-label="Graduation cap emoji" className="mr-2">🎓</span>
         Education
       </h2>
       <div className="space-y-8">
         {educationData.map((entry) => (
-          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-card/90 dark:bg-card/80">
             <CardHeader>
-              <div className="flex flex-col sm:flex-row justify-between items-center gap-6"> {/* Increased gap */}
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
                 <div className="flex-grow">
-                  <CardTitle className="text-xl md:text-2xl font-semibold text-foreground">{entry.university}</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl font-semibold text-card-foreground">{entry.university}</CardTitle>
                   <CardDescription className="text-md text-primary mt-1">{entry.degree}</CardDescription>
                 </div>
                 {entry.logoUrl && (

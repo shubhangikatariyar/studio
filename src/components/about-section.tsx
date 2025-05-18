@@ -1,7 +1,6 @@
 
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import FloatingNetworkBackground from './floating-network-background';
 import { Card, CardContent } from '@/components/ui/card';
 
 const profileData = {
@@ -14,15 +13,15 @@ export function AboutSection() {
   const { name, profileImageUrl, aboutMeParagraph } = profileData;
 
   return (
-    <section id="about" className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-background text-foreground">
-      <FloatingNetworkBackground />
+    <section id="about" className="relative py-16 md:py-24 lg:py-32 overflow-hidden text-foreground">
+      {/* FloatingNetworkBackground removed, page will have global background */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-12 flex flex-col items-center">
           <Avatar className="w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 border-4 border-primary shadow-xl mb-4">
             <AvatarImage src={profileImageUrl} alt={name} data-ai-hint="professional portrait woman" />
             <AvatarFallback>{name.substring(0, 1)}{name.split(' ')[1]?.[0] || ''}</AvatarFallback>
           </Avatar>
-          <h1 className="text-4xl md:text-5xl font-bold">{name}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-50">{name}</h1>
         </div>
         
         <div className="mt-12">
