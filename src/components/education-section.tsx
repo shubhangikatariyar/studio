@@ -38,7 +38,7 @@ export function EducationSection() {
                   <CardDescription className="text-md text-primary mt-1">{entry.degree}</CardDescription>
                 </div>
                 {entry.logoUrl && (
-                  <div className={`w-36 h-36 md:w-48 md:h-48 rounded-full bg-white border border-border flex items-center justify-center self-center sm:self-auto shadow-xl flex-shrink-0 ${entry.university === 'University of Wisconsin, Madison' ? 'p-2' : 'p-4'}`}>
+                  <div className={`w-36 h-36 md:w-48 md:h-48 rounded-full bg-white border border-border flex items-center justify-center self-center sm:self-auto shadow-xl flex-shrink-0 ${entry.university === 'University of Wisconsin, Madison' ? 'p-1' : 'p-4'}`}>
                     <img
                       src={entry.logoUrl}
                       alt={`${entry.university} logo`}
@@ -67,4 +67,3 @@ export function EducationSection() {
     </section>
   );
 }
-

@@ -34,7 +34,7 @@ export function ExperienceSection() {
   return (
     <section id="experience" aria-labelledby="experience-title" className="py-8">
       <h2 id="experience-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
-        <span role="img" aria-label="Technologist emoji" className="mr-2">👨‍💻</span>
+        <span role="img" aria-label="Woman technologist emoji" className="mr-2">👩‍💻</span>
         Work Experience
       </h2>
       <div className="space-y-6">
