@@ -1,3 +1,4 @@
+
 import type { ExperienceEntry } from '@/types';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Building, CalendarDays } from 'lucide-react';
@@ -13,7 +14,7 @@ const experienceData: ExperienceEntry[] = [
       'Designed and implemented machine learning models for predictive analytics.',
       'Collaborated with cross-functional teams to integrate AI into existing products.',
     ],
-    logoUrl: 'https://picsum.photos/seed/tcs/40/40', // Placeholder
+    logoUrl: 'https://placehold.co/40x40.png',
   },
   {
     id: '2',
@@ -25,7 +26,7 @@ const experienceData: ExperienceEntry[] = [
       'Contributed to data preprocessing and feature engineering tasks.',
       'Researched and evaluated state-of-the-art NLP techniques.',
     ],
-    logoUrl: 'https://picsum.photos/seed/tcs/40/40', // Placeholder for consistency
+    logoUrl: 'https://placehold.co/40x40.png',
   },
 ];
 

@@ -1,3 +1,4 @@
+
 import type { EducationEntry } from '@/types';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Briefcase, CalendarDays } from 'lucide-react'; // Using Briefcase as a stand-in for GraduationCap which is not in Lucide
@@ -9,14 +10,14 @@ const educationData: EducationEntry[] = [
     degree: "Master's in Electrical and Computer Engineering",
     specialization: 'Machine Learning and Signal Processing',
     dates: 'Aug 2025 - Dec 2026',
-    logoUrl: 'https://picsum.photos/seed/uwmadison/40/40', // Placeholder
+    logoUrl: 'https://placehold.co/40x40.png',
   },
   {
     id: '2',
     university: 'University of Mumbai',
     degree: "Bachelor's in Electronics and Telecommunications Engineering",
     dates: 'Aug 2018 - May 2022',
-    logoUrl: 'https://picsum.photos/seed/mumbaiuni/40/40', // Placeholder
+    logoUrl: 'https://placehold.co/40x40.png',
   },
 ];
 
