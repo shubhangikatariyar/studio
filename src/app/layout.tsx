@@ -26,23 +26,20 @@ const InitializeTheme = () => {
       let theme = 'dark'; // Default to dark
       try {
         const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
+        if (storedTheme === 'light' || storedTheme === 'dark') { // Check for valid theme values
           theme = storedTheme;
         } else {
-          const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (systemPrefersDark) {
-            // If system prefers dark, respect it, otherwise it stays our 'dark' default
-            theme = 'dark';
-          }
-          // If systemPrefersDark is false, theme remains 'dark' from our initial default
+          // If no valid stored theme, 'theme' remains 'dark' (our default).
+          // System preference check was previously removed to enforce dark default.
         }
       } catch (e) {
-        // localStorage or matchMedia might not be available
+        // localStorage might not be available or accessible
         // Theme remains 'dark' (our default)
       }
       if (theme === 'dark') {
         document.documentElement.classList.add('dark');
       } else {
+        // If theme is 'light', ensure 'dark' class is removed.
         document.documentElement.classList.remove('dark');
       }
     })();
@@ -56,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full scroll-smooth">
+    <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}>
         <InitializeTheme />
         <TooltipProvider>
