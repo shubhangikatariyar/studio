@@ -14,7 +14,7 @@
     --popover: 0 0% 100%; /* White */
     --popover-foreground: 0 0% 9%; /* Dark Gray */
 
-    --primary: 210 60% 50%; /* New Blue for light theme */
+    --primary: 358 95% 40%; /* UW Madison Red */
     --primary-foreground: 0 0% 100%; /* White for text on primary */
 
     --secondary: 0 0% 94%; /* Lighter Gray #f0f0f0 */
@@ -23,7 +23,7 @@
     --muted: 0 0% 90%; /* Muted Gray #e5e5e5 */
     --muted-foreground: 0 0% 45%; /* Muted Text #737373 */
 
-    --accent: 210 60% 50%; /* New Blue for light theme - for highlights */
+    --accent: 358 95% 40%; /* UW Madison Red */
     --accent-foreground: 0 0% 100%; /* White for text on accent */
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 0 0% 89.8%; /* #e5e5e5 slightly adjusted */
     --input: 0 0% 89.8%; /* #e5e5e5 slightly adjusted */
-    --ring: 210 60% 50%; /* New Blue for light theme for focus rings */
+    --ring: 358 95% 40%; /* UW Madison Red for focus rings */
 
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
@@ -42,12 +42,12 @@
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 9%;
-    --sidebar-primary: 210 60% 50%; /* New Blue for light theme sidebar */
+    --sidebar-primary: 358 95% 40%; /* UW Madison Red */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 94%;
     --sidebar-accent-foreground: 0 0% 9%;
     --sidebar-border: 0 0% 89.8%;
-    --sidebar-ring: 210 60% 50%; /* New Blue for light theme sidebar ring */
+    --sidebar-ring: 358 95% 40%; /* UW Madison Red */
   }
 
   .dark {
@@ -60,7 +60,7 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 70% 60%; /* Brighter New Blue for dark theme */
+    --primary: 358 85% 55%; /* Brighter UW Red for dark theme */
     --primary-foreground: 0 0% 100%; 
 
     --secondary: 0 0% 15%; /* Darker Gray for secondary elements */
@@ -69,7 +69,7 @@
     --muted: 0 0% 20%; /* Muted Dark Gray */
     --muted-foreground: 0 0% 65%;
 
-    --accent: 210 70% 60%; /* Brighter New Blue for dark theme */
+    --accent: 358 85% 55%; /* Brighter UW Red for dark theme */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -77,7 +77,7 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 210 70% 60%; /* Brighter New Blue for dark theme ring */
+    --ring: 358 85% 55%; /* Brighter UW Red for dark theme ring */
 
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -87,12 +87,12 @@
 
     --sidebar-background: 0 0% 9%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 210 70% 60%; /* Brighter New Blue for dark theme sidebar */
+    --sidebar-primary: 358 85% 55%; /* Brighter UW Red for dark theme sidebar */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 210 70% 60%; /* Brighter New Blue for dark theme sidebar ring */
+    --sidebar-ring: 358 85% 55%; /* Brighter UW Red for dark theme sidebar ring */
   }
 }
 
