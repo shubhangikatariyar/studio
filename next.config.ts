@@ -1,51 +1,15 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  // Required for GitHub Pages static export
-  output: 'export',
-  
-  // Your existing configuration
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  output: 'export', // Required for static export
   images: {
-    // Required for static export with images
-    unoptimized: true,
-    
-    // Your existing remote patterns
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'upload.wikimedia.org',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'static.wikia.nocookie.net',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-        port: '',
-        pathname: '/**',
-      }
-    ],
+    unoptimized: true, // Required for static export
   },
-  
-  // Optional: Add basePath if deploying to a subpath
-  // basePath: '/studio', // Uncomment if your site is at username.github.io/studio
-};
+  // Keep your existing configurations
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
+  // Add basePath only if deploying to subfolder (e.g., /studio)
+  basePath: process.env.NODE_ENV === 'production' ? '/studio' : '',
+}
 
-export default nextConfig;
+export default nextConfig
