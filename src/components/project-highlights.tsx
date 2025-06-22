@@ -10,8 +10,8 @@ const projectsData: Project[] = [
     id: '1',
     title: 'Survival Prediction of Renal Cell Carcinoma Patients using ML',
     description: 'Developed a machine learning model to predict the survival outcomes of Renal Cell Carcinoma patients, leveraging clinical data and segmented tumor features from CT scans to improve prognostic accuracy. This research was published in an IEEE conference.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'medical imaging tumor segmentation',
+    imageUrl: `${basePath}/rcc-prediction-cover.png`,
+    imageHint: 'CT scan tumor',
     demoUrl: 'https://ieeexplore.ieee.org/document/10455029',
     demoButtonText: 'View Paper'
   },
