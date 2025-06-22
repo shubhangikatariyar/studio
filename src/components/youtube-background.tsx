@@ -21,6 +21,7 @@ const YouTubeBackground: React.FC<YouTubeBackgroundProps> = ({ videoId }) => {
           // Ensure the video covers the area, aspect ratio might make it larger than viewport
           // This is a common approach to achieve a 'cover' effect for iframes
         }}
+        
       />
       {/* Overlay to improve text readability */}
       <div className="absolute inset-0 bg-black/60"></div>
