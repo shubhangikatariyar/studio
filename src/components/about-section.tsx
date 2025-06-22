@@ -3,10 +3,11 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 
+const basePath = '/studio';
+
 const profileData = {
   name: 'Shubhangi Katariyar',
-  // Updated to a local path. User needs to add 'profile-picture.jpg' to the 'public' folder.
-  profileImageUrl: '/profile-picture.jpg', 
+  profileImageUrl: `${basePath}/profile-picture.jpg`, 
   aboutMeParagraph: "I'm a graduate student at the University of Wisconsin–Madison with a strong interest in machine learning and applied AI. Before pursuing my master's, I worked for over 3 years at Tata Consultancy Services (TCS), where I developed and deployed AI-driven solutions across domains such as NLP, computer vision, and cybersecurity. I'm passionate about building scalable ML systems that create real-world impact, and I’m actively exploring opportunities in research and industry where I can continue solving complex problems with data and algorithms."
 };
 

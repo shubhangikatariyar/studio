@@ -10,9 +10,11 @@ const socialLinks: SocialLink[] = [
   { platform: 'Twitter', url: '#', icon: Twitter, ariaLabel: "Shubhangi Katariyar's Twitter Profile" }, // Placeholder URL
 ];
 
+const basePath = '/studio';
+
 const contactProfileData = {
   name: 'Shubhangi Katariyar',
-  resumeUrl: '/resume_shubhangi_katariyar.pdf',
+  resumeUrl: `${basePath}/resume_shubhangi_katariyar.pdf`,
 };
 
 export function ContactSection() {
