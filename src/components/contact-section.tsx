@@ -27,7 +27,7 @@ export function ContactSection() {
         </h2>
         <div className="mb-10">
           <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-            <a href={contactProfileData.resumeUrl} download={`${contactProfileData.name.replace(/\s+/g, '_')}_Resume.pdf`}>
+            <a href={contactProfileData.resumeUrl} download>
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </a>
