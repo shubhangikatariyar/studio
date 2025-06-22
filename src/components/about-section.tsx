@@ -3,9 +3,11 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
+
 const profileData = {
   name: 'Shubhangi Katariyar',
-  profileImageUrl: '/profile-picture.jpg',
+  profileImageUrl: `${basePath}/profile-picture.jpg`,
   aboutMeParagraphs: [
     "Hey there!",
     "I’m a ML graduate student at the University of Wisconsin–Madison. I have spent over 3 years at Tata Consultancy Services (TCS), building and deploying AI-powered solutions in areas like natural language processing and computer vision.",
