@@ -1,7 +1,7 @@
-
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+<<<<<<< HEAD
   output: 'export',
   basePath: '/my-portfolio',
   typescript: {
@@ -38,7 +38,17 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       }
     ],
+=======
+  output: 'export', // Required for static export
+  images: {
+    unoptimized: true, // Required for static export
+>>>>>>> refs/remotes/origin/master
   },
-};
+  // Keep your existing configurations
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
+  // Add basePath only if deploying to subfolder (e.g., /studio)
+  basePath: process.env.NODE_ENV === 'production' ? '/studio' : '',
+}
 
-export default nextConfig;
+export default nextConfig

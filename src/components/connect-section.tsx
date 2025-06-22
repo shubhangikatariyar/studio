@@ -6,7 +6,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 const socialLinks: SocialLink[] = [
   { platform: 'LinkedIn', url: 'https://linkedin.com/in/shubhangi-katariyar-portfolio', icon: Linkedin, ariaLabel: "Shubhangi Katariyar's LinkedIn Profile" },
   { platform: 'GitHub', url: 'https://github.com/shubhangik S', icon: Github, ariaLabel: "Shubhangi Katariyar's GitHub Profile" },
-  { platform: 'Email', url: 'mailto:shubhangik19@gmail.com', icon: Mail, ariaLabel: "Email Shubhangi Katariyar" },
+  { platform: 'Email', url: 'mailto:katariyar@wisc.edu', icon: Mail, ariaLabel: "Email Shubhangi Katariyar" },
 ];
 
 export function ConnectSection() {
@@ -39,7 +39,7 @@ export function ConnectSection() {
           ))}
         </div>
         <p className="text-muted-foreground">
-          Feel free to reach out via email: <a href="mailto:shubhangik19@gmail.com" className="text-primary hover:underline">shubhangik19@gmail.com</a>
+          Feel free to reach out via email: <a href="mailto:katariyar@wisc.edu" className="text-primary hover:underline">shubhangik19@gmail.com</a>
         </p>
       </div>
     </section>
