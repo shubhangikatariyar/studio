@@ -36,10 +36,12 @@ const projectsData: Project[] = [
   },
   {
     id: '4',
-    title: 'AI-Powered Recommendation System',
-    description: 'Designed and implemented a recommendation engine using collaborative filtering techniques to provide personalized content suggestions, improving user engagement and content discovery.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'recommendation system',
+    title: 'LED Chaser Using 8051',
+    description: 'A simple yet fascinating project that demonstrates the use of the 8051 microcontroller to create a chaser effect with LEDs.',
+    imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/LED-Chaser-Using-8051/main/led.gif?raw=true',
+    imageHint: 'LED chaser circuit',
+    demoUrl: 'https://www.youtube.com/watch?v=iF4nVP354X0',
+    codeUrl: 'https://github.com/shubhangikatariyar/LED-Chaser-Using-8051',
   },
 ];
 
