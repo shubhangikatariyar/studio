@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 
-const basePath = '/studio';
+const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
 
 const profileData = {
   name: 'Shubhangi Katariyar',
