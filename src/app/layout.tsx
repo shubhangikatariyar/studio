@@ -13,6 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Shubhangi Katariyar - AI Engineer Portfolio',
   description: 'Portfolio of Shubhangi Katariyar, showcasing AI/ML projects, education, and experience.',
+  icons: null,
 };
 
 const InitializeTheme = () => {
