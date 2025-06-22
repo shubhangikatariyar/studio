@@ -14,19 +14,19 @@ export function AppHeader() {
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
             <Link href="#about">About</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
             <Link href="#education">Education</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
             <Link href="#experience">Experience</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
             <Link href="#projects">Projects</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
             <Link href="#contact">Contact</Link>
           </Button>
         </nav>
