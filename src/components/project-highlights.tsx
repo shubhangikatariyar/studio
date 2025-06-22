@@ -3,13 +3,15 @@ import { ProjectCard } from './project-card';
 import type { Project } from '@/types';
 // import { Button } from '@/components/ui/button'; // Optional: for "Load More"
 
+const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
+
 const projectsData: Project[] = [
   {
     id: '1',
     title: 'Survival Prediction of Renal Cell Carcinoma Patients using ML',
-    description: 'Developed a machine learning model to predict the survival outcomes of Renal Cell Carcinoma patients, leveraging clinical data to improve prognostic accuracy. This research was published in an IEEE conference.',
+    description: 'Developed a machine learning model to predict the survival outcomes of Renal Cell Carcinoma patients. The process involved analyzing CT scans, segmenting tumors, and leveraging clinical data to improve prognostic accuracy. This research was published in an IEEE conference.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'medical research',
+    imageHint: 'medical imaging',
     demoUrl: 'https://ieeexplore.ieee.org/document/10455029',
     demoButtonText: 'View Paper'
   },
@@ -24,7 +26,7 @@ const projectsData: Project[] = [
     id: '3',
     title: 'Hippi Hangry Game',
     description: 'A vibrant 2D arcade game built with Unity (C#), where players control a perpetually hungry hippie dodging danger lines to devour watermelons. I engineered the core systems from scratch, implementing Unity’s Physics2D with Rigidbody dynamics for snappy movement and Collider2D-based AABB detection for efficient watermelon collection and hazard avoidance. The architecture leverages event-driven design (via ScriptableObjects) for scoring and UI updates, while a state machine cleanly handles game flow between menus, gameplay, and pause states. To optimize performance, I integrated object pooling for obstacle generation, reducing instantiation overhead.',
-    imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/HippiHangryGame/main/Hippi.gif',
+    imageUrl: `${basePath}/Hippi.gif`,
     imageHint: 'arcade game',
     demoUrl: 'https://www.youtube.com/shorts/TC2j8moP46k',
     demoButtonText: 'View Demo',
