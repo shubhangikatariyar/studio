@@ -20,7 +20,13 @@ const projectsData: Project[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'robotic arm',
   },
-  // Add more projects here later as needed
+  {
+    id: '3',
+    title: 'AI-Powered Recommendation System',
+    description: 'Designed and implemented a recommendation engine using collaborative filtering techniques to provide personalized content suggestions, improving user engagement and content discovery.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'recommendation system',
+  },
 ];
 
 export function ProjectHighlights() {
