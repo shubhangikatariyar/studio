@@ -7,12 +7,16 @@ const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
 
 const profileData = {
   name: 'Shubhangi Katariyar',
-  profileImageUrl: `${basePath}/profile-picture.jpg`, 
-  aboutMeParagraph: "I'm a graduate student at the University of Wisconsin–Madison with a strong interest in machine learning and applied AI. Before pursuing my master's, I worked for over 3 years at Tata Consultancy Services (TCS), where I developed and deployed AI-driven solutions across domains such as NLP, computer vision, and cybersecurity. I'm passionate about building scalable ML systems that create real-world impact, and I’m actively exploring opportunities in research and industry where I can continue solving complex problems with data and algorithms."
+  profileImageUrl: `${basePath}/profile-picture.jpg`,
+  aboutMeParagraphs: [
+    "Hey there! I’m a graduate student at the University of Wisconsin–Madison, where I’m diving deep into machine learning and applied AI. Before this, I spent over 3 years at Tata Consultancy Services (TCS), building and deploying AI-powered solutions in areas like natural language processing and computer vision.",
+    "I’m all about turning data into impactful, scalable ML systems — the kind that don’t just work in theory, but solve real problems in the real world. Whether it's research or industry, I’m excited by challenges that push boundaries and create meaningful change.",
+    "I’m currently open to opportunities in machine learning and AI — let’s connect!"
+  ],
 };
 
 export function AboutSection() {
-  const { name, profileImageUrl, aboutMeParagraph } = profileData;
+  const { name, profileImageUrl, aboutMeParagraphs } = profileData;
 
   return (
     <section id="about" className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
@@ -33,9 +37,13 @@ export function AboutSection() {
           </h2>
           <Card className="max-w-3xl mx-auto shadow-xl bg-card/90 dark:bg-card/80 text-card-foreground">
             <CardContent className="p-6 md:p-8">
-              <p className="text-lg text-left leading-relaxed">
-                {aboutMeParagraph}
-              </p>
+              <div className="space-y-4 text-lg text-left leading-relaxed">
+                {aboutMeParagraphs.map((paragraph, index) => (
+                  <p key={index}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </CardContent>
           </Card>
         </div>
