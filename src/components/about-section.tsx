@@ -32,10 +32,6 @@ export function AboutSection() {
         </div>
         
         <div className="mt-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6 text-center">
-            <span role="img" aria-label="Briefcase emoji" className="mr-2">💼</span>
-            About Me
-          </h2>
           <Card className="max-w-3xl mx-auto shadow-xl bg-card/90 dark:bg-card/80 text-card-foreground">
             <CardContent className="p-6 md:p-8">
               <div className="space-y-4 text-lg text-left leading-relaxed">
