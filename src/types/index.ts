@@ -14,6 +14,7 @@ export interface Project {
   imageUrl: string;
   imageHint: string; 
   demoUrl?: string;
+  demoButtonText?: string;
   codeUrl?: string;
 }
 

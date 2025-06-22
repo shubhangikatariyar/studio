@@ -6,30 +6,19 @@ import type { Project } from '@/types';
 const projectsData: Project[] = [
   {
     id: '1',
-    title: 'AI-Powered Recommendation Engine',
-    description: 'Developed a personalized recommendation system using collaborative filtering and deep learning techniques. This engine improved user engagement by 25% and demonstrated proficiency in Python, TensorFlow, and Scikit-learn.',
+    title: 'Survival Prediction of Renal Cell Carcinoma Patients using ML',
+    description: 'Developed a machine learning model to predict the survival outcomes of Renal Cell Carcinoma patients, leveraging clinical data to improve prognostic accuracy. This research was published in an IEEE conference.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'abstract network graph',
-    demoUrl: '#', // Replace with actual demo link
-    codeUrl: '#', // Replace with actual code link
+    imageHint: 'medical research',
+    demoUrl: 'https://ieeexplore.ieee.org/document/10455029',
+    demoButtonText: 'View Paper'
   },
   {
     id: '2',
-    title: 'Natural Language Processing Chatbot',
-    description: 'Built an intelligent chatbot for customer service automation, capable of understanding and responding to complex queries with 90% accuracy using NLTK, SpaCy, and Rasa.',
+    title: 'Sahayak Bot - Pick and Place Bot',
+    description: 'Engineered a robotic arm system, "Sahayak Bot", for automated pick-and-place tasks. The project involved integrating computer vision for object detection and robotics for precise manipulation.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'chatbot interface conversation',
-    demoUrl: '#', // Replace with actual demo link
-    codeUrl: '#', // Replace with actual code link
-  },
-  {
-    id: '3',
-    title: 'Computer Vision Object Detection',
-    description: 'Implemented a real-time object detection model for autonomous systems using YOLOv5 and OpenCV, achieving high precision in diverse environments for traffic monitoring.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'object detection bounding',
-    demoUrl: '#', // Replace with actual demo link
-    codeUrl: '#', // Replace with actual code link
+    imageHint: 'robotic arm',
   },
   // Add more projects here later as needed
 ];
@@ -41,7 +30,7 @@ export function ProjectHighlights() {
         <span role="img" aria-label="Sparkles emoji" className="mr-2">✨</span>
         Project Highlights
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> 
         {projectsData.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

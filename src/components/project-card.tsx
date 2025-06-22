@@ -39,7 +39,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {project.demoUrl && project.demoUrl !== '#' && (
           <Button variant="outline" asChild className="w-full sm:w-auto">
             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" /> View Demo
+              <ExternalLink className="mr-2 h-4 w-4" /> {project.demoButtonText || 'View Demo'}
             </a>
           </Button>
         )}
