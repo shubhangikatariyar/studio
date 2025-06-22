@@ -7,7 +7,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 const socialLinks: SocialLink[] = [
   { platform: 'LinkedIn', url: 'https://in.linkedin.com/in/shubhangi-katariyar', icon: Linkedin, ariaLabel: "Shubhangi Katariyar's LinkedIn Profile" },
   { platform: 'GitHub', url: 'https://github.com/shubhangikatariyar', icon: Github, ariaLabel: "Shubhangi Katariyar's GitHub Profile" },
-  { platform: 'Twitter', url: '#', icon: Twitter, ariaLabel: "Shubhangi Katariyar's Twitter Profile" }, // Placeholder URL
+  { platform: 'Twitter', url: 'https://x.com/shubhangikat', icon: Twitter, ariaLabel: "Shubhangi Katariyar's Twitter Profile" }, 
 ];
 
 const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
