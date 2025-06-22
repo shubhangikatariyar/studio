@@ -1,8 +1,10 @@
-
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Required for GitHub Pages static export
+  output: 'export',
+  
+  // Your existing configuration
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -10,6 +12,10 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // Required for static export with images
+    unoptimized: true,
+    
+    // Your existing remote patterns
     remotePatterns: [
       {
         protocol: 'https',
@@ -37,6 +43,9 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  
+  // Optional: Add basePath if deploying to a subpath
+  // basePath: '/studio', // Uncomment if your site is at username.github.io/studio
 };
 
 export default nextConfig;
