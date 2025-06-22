@@ -8,13 +8,14 @@ import { ProjectHighlights } from '@/components/project-highlights';
 import { ContactSection } from '@/components/contact-section';
 import { Separator } from '@/components/ui/separator';
 
+const basePath = '/studio';
+
 export default function HomePage() {
   return (
     <div
       className="flex flex-col min-h-screen relative"
       style={{
-        // Updated to a local path. User needs to add 'background-image.jpg' to the 'public' folder.
-        backgroundImage: "url('/background-image.jpg')", 
+        backgroundImage: `url(${basePath}/background-image.jpg)`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

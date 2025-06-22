@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
     ],
   },
   // Add basePath only if deploying to subfolder (e.g., /studio)
-  basePath: process.env.NODE_ENV === 'production' ? '/studio' : '',
+  basePath: '/studio',
 }
 
 export default nextConfig
