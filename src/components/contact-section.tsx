@@ -14,7 +14,7 @@ const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
 
 const contactProfileData = {
   name: 'Shubhangi Katariyar',
-  resumeUrl: `${basePath}/resume_shubhangi_katariyar.pdf`,
+  resumeUrl: `${basePath}/resume.pdf`,
 };
 
 export function ContactSection() {
