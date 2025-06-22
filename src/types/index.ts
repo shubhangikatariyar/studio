@@ -28,11 +28,16 @@ export interface EducationEntry {
   logoUrl?: string; 
 }
 
+export interface ExperienceDetail {
+  title: string;
+  text: string;
+}
+
 export interface ExperienceEntry {
   id: string;
   company: string;
   role: string;
   dates: string;
-  description?: string[]; // Array of responsibilities/achievements
+  description?: (string | ExperienceDetail)[]; // Array of responsibilities/achievements
   logoUrl?: string; 
 }
