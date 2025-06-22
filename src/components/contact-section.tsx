@@ -56,7 +56,14 @@ export function ContactSection() {
           ))}
         </div>
         <p className="text-muted-foreground">
-          Feel free to reach out via email: <a href="mailto:katariyar.shubhangi@gmail.com" className="text-primary hover:underline">katariyar.shubhangi@gmail.com</a>
+          Feel free to reach out via email:{' '}
+          <a href="mailto:katariyar.shubhangi@gmail.com" className="text-primary hover:underline">
+            katariyar.shubhangi@gmail.com
+          </a>{' '}
+          or{' '}
+          <a href="mailto:katariyar@wisc.edu" className="text-primary hover:underline">
+            katariyar@wisc.edu
+          </a>
         </p>
       </div>
     </section>
