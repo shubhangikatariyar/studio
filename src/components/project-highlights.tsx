@@ -27,7 +27,7 @@ const projectsData: Project[] = [
   {
     id: '3',
     title: 'Hippi Hangry Game',
-    description: 'A vibrant 2D arcade game built with Unity (C#), where players control a perpetually hungry hippie dodging danger lines to devour watermelons. I engineered the core systems from scratch, implementing Unity’s Physics2D with Rigidbody dynamics for snappy movement and Collider2D-based AABB detection for efficient watermelon collection and hazard avoidance. The architecture leverages event-driven design (via ScriptableObjects) for scoring and UI updates, while a state machine cleanly handles game flow between menus, gameplay, and pause states. To optimize performance, I integrated object pooling for obstacle generation, reducing instantiation overhead.',
+    description: 'A vibrant 2D arcade game built with Unity (C#), where players control a hungry hippie dodging dangers to eat watermelons. Key features include custom physics, event-driven scoring, and performance optimizations like object pooling.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/HippiHangryGame/main/Hippi.gif?raw=true',
     imageHint: 'arcade game',
     demoUrl: 'https://www.youtube.com/shorts/TC2j8moP46k',
