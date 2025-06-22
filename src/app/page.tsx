@@ -8,7 +8,7 @@ import { ProjectHighlights } from '@/components/project-highlights';
 import { ContactSection } from '@/components/contact-section';
 import { Separator } from '@/components/ui/separator';
 
-const basePath = '/studio';
+const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
 
 export default function HomePage() {
   return (

@@ -10,7 +10,7 @@ const socialLinks: SocialLink[] = [
   { platform: 'Twitter', url: '#', icon: Twitter, ariaLabel: "Shubhangi Katariyar's Twitter Profile" }, // Placeholder URL
 ];
 
-const basePath = '/studio';
+const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
 
 const contactProfileData = {
   name: 'Shubhangi Katariyar',
