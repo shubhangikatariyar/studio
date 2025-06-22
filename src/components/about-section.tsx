@@ -9,7 +9,8 @@ const profileData = {
   name: 'Shubhangi Katariyar',
   profileImageUrl: `${basePath}/profile-picture.jpg`,
   aboutMeParagraphs: [
-    "Hey there! I’m a graduate student at the University of Wisconsin–Madison, where I’m diving deep into machine learning and applied AI. Before this, I spent over 3 years at Tata Consultancy Services (TCS), building and deploying AI-powered solutions in areas like natural language processing and computer vision.",
+    "Hey there!",
+    "I’m a graduate student at the University of Wisconsin–Madison, where I’m diving deep into machine learning and applied AI. Before this, I spent over 3 years at Tata Consultancy Services (TCS), building and deploying AI-powered solutions in areas like natural language processing and computer vision.",
     "I’m all about turning data into impactful, scalable ML systems — the kind that don’t just work in theory, but solve real problems in the real world. Whether it's research or industry, I’m excited by challenges that push boundaries and create meaningful change.",
     "I’m currently open to opportunities in machine learning and AI — let’s connect!"
   ],
