@@ -8,14 +8,12 @@ import { ProjectHighlights } from '@/components/project-highlights';
 import { ContactSection } from '@/components/contact-section';
 import { Separator } from '@/components/ui/separator';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
-
 export default function HomePage() {
   return (
     <div
       className="flex flex-col min-h-screen relative"
       style={{
-        backgroundImage: `url(${basePath}/background-image.jpg)`, 
+        backgroundImage: `url(/background-image.jpg)`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
