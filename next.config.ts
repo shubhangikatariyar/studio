@@ -1,7 +1,5 @@
 import type { NextConfig } from 'next'
 
-const isProd = process.env.NODE_ENV === 'production'
-
 const nextConfig: NextConfig = {
   output: 'export',
   typescript: {
@@ -45,8 +43,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Set basePath only for production build on GitHub Pages
-  basePath: isProd ? '/studio' : '',
 }
 
 export default nextConfig

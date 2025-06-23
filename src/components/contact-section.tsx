@@ -10,11 +10,9 @@ const socialLinks: SocialLink[] = [
   { platform: 'Twitter', url: 'https://x.com/shubhangikat', icon: Twitter, ariaLabel: "Shubhangi Katariyar's Twitter Profile" }, 
 ];
 
-const basePath = process.env.NODE_ENV === 'production' ? '/studio' : '';
-
 const contactProfileData = {
   name: 'Shubhangi Katariyar',
-  resumeUrl: `${basePath}/resume.pdf`,
+  resumeUrl: `/resume.pdf`,
 };
 
 export function ContactSection() {
