@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const profileData = {
   name: 'Shubhangi Katariyar',
-  profileImageUrl: '/profile-picture.jpg',
+  profileImageUrl: '/studio/profile-picture.jpg',
   aboutMeParagraphs: [
     "Hey there!",
     "I’m a ML graduate student at the University of Wisconsin–Madison. I have spent over 3 years at Tata Consultancy Services (TCS), building and deploying AI-powered solutions in areas like natural language processing and computer vision.",
