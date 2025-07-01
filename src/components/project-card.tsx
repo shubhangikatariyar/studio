@@ -39,14 +39,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardHeader>
       <CardContent className="flex-grow flex flex-col">
         <div className="relative aspect-[16/10] w-full mb-4 rounded-md overflow-hidden">
-          <Image
-            src={project.imageUrl}
-            alt={project.title}
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-300 group-hover:scale-105"
-            data-ai-hint={project.imageHint}
-          />
+          {project.imageUrl.endsWith('.gif') ? (
+            <img
+              src={project.imageUrl}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              data-ai-hint={project.imageHint}
+            />
+          ) : (
+            <Image
+              src={project.imageUrl}
+              alt={project.title}
+              layout="fill"
+              objectFit="cover"
+              className="transition-transform duration-300 group-hover:scale-105"
+              data-ai-hint={project.imageHint}
+            />
+          )}
         </div>
         <CardDescription
           ref={descriptionRef}
