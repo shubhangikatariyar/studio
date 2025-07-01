@@ -56,10 +56,9 @@ export default function RootLayout({
           <Image
             src="https://raw.githubusercontent.com/shubhangikatariyar/shubhangikatariyar.github.io/master/public/background-image.jpg"
             alt="Abstract background"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             quality={80}
-            priority
           />
         </div>
         <div className="fixed inset-0 -z-10 bg-black/60"></div>
