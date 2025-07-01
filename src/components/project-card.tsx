@@ -33,7 +33,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   }, [project.description]);
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group bg-card/90 dark:bg-card/80">
+    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group bg-card">
       <CardHeader>
         <CardTitle className="text-xl font-semibold text-card-foreground">{project.title}</CardTitle>
       </CardHeader>
