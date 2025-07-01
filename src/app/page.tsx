@@ -10,7 +10,7 @@ import { Separator } from '@/components/ui/separator';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col min-h-screen">
       <AppHeader />
       <main className="flex-grow">
         <AboutSection />
