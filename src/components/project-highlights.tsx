@@ -8,7 +8,7 @@ const projectsData: Project[] = [
     id: '1',
     title: 'Survival Prediction of Renal Cell Carcinoma Patients using ML',
     description: 'Developed a machine learning model to predict the survival outcomes of Renal Cell Carcinoma patients, leveraging clinical data and segmented tumor features from CT scans to improve prognostic accuracy. This research was published in an IEEE conference.',
-    imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/shubhangikatariyar.github.io/master/public/rcc-prediction-cover.png',
+    imageUrl: '/rcc-prediction-cover.png',
     imageHint: 'CT scan tumor',
     demoUrl: 'https://ieeexplore.ieee.org/document/10455029',
     demoButtonText: 'View Paper'
@@ -56,7 +56,7 @@ const projectsData: Project[] = [
 export function ProjectHighlights() {
   return (
     <section id="projects" aria-labelledby="project-highlights-title" className="py-8">
-      <h2 id="project-highlights-title" className="text-3xl font-bold text-gray-100 mb-8 text-center md:text-left">
+      <h2 id="project-highlights-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
         <span role="img" aria-label="Sparkles emoji" className="mr-2">✨</span>
         Project Highlights
       </h2>

@@ -24,13 +24,13 @@ const educationData: EducationEntry[] = [
 export function EducationSection() {
   return (
     <section id="education" aria-labelledby="education-title" className="py-8">
-      <h2 id="education-title" className="text-3xl font-bold text-gray-100 mb-8 text-center md:text-left">
+      <h2 id="education-title" className="text-3xl font-bold text-foreground mb-8 text-center md:text-left">
         <span role="img" aria-label="Graduation cap emoji" className="mr-2">🎓</span>
         Education
       </h2>
       <div className="space-y-8">
         {educationData.map((entry) => (
-          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-card/90 dark:bg-card/80">
+          <Card key={entry.id} className="shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-card">
             <CardHeader>
               <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
                 <div className="flex-grow">
