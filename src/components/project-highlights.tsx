@@ -8,7 +8,7 @@ const projectsData: Project[] = [
     id: '1',
     title: 'Survival Prediction of Renal Cell Carcinoma Patients using ML',
     description: 'Developed a machine learning model to predict the survival outcomes of Renal Cell Carcinoma patients, leveraging clinical data and segmented tumor features from CT scans to improve prognostic accuracy. This research was published in an IEEE conference.',
-    imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/shubhangikatariyar.github.io/master/public/rcc-prediction-cover.png',
+    imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/studio/master/public/rcc-prediction-cover.png',
     imageHint: 'CT scan tumor',
     demoUrl: 'https://ieeexplore.ieee.org/document/10455029',
     demoButtonText: 'View Paper'
