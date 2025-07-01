@@ -1,6 +1,6 @@
+
 'use client';
 
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -26,7 +26,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   useEffect(() => {
     const el = descriptionRef.current;
-    // Check if the content is overflowing when it's in its clamped state
     if (el && el.scrollHeight > el.clientHeight) {
       setIsOverflowing(true);
     }
@@ -39,23 +38,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardHeader>
       <CardContent className="flex-grow flex flex-col">
         <div className="relative aspect-[16/10] w-full mb-4 rounded-md overflow-hidden">
-          {project.imageUrl.endsWith('.gif') ? (
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              data-ai-hint={project.imageHint}
-            />
-          ) : (
-            <Image
-              src={project.imageUrl}
-              alt={project.title}
-              layout="fill"
-              objectFit="cover"
-              className="transition-transform duration-300 group-hover:scale-105"
-              data-ai-hint={project.imageHint}
-            />
-          )}
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            data-ai-hint={project.imageHint}
+            loading="lazy"
+          />
         </div>
         <CardDescription
           ref={descriptionRef}
