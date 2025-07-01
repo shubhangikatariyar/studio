@@ -23,7 +23,7 @@ const InitializeTheme = () => {
       let theme = 'dark'; // Default to dark
       try {
         const storedTheme = localStorage.getItem('theme');
-        if (storedTheme === 'light' || storedTheme === 'dark') { // Check for valid theme values
+        if (storedTheme === 'light' || 'dark') { // Check for valid theme values
           theme = storedTheme;
         } else {
           // If no valid stored theme, 'theme' remains 'dark' (our default).
@@ -54,7 +54,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased h-full`}>
         <div className="fixed inset-0 -z-20">
           <Image
-            src="https://raw.githubusercontent.com/shubhangikatariyar/studio/master/public/background-image.jpg"
+            src="https://raw.githubusercontent.com/shubhangikatariyar/shubhangikatariyar.github.io/master/public/background-image.jpg"
             alt="Abstract background"
             layout="fill"
             objectFit="cover"
