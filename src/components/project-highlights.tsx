@@ -15,6 +15,16 @@ const projectsData: Project[] = [
   },
   {
     id: '2',
+    title: 'Cine AI: Movie Recommendation System',
+    description: 'Developed a content-based movie recommendation system using NLP to analyze movie plots and generate similarity scores. The user-friendly interface, built with Streamlit and deployed on Heroku, provides personalized movie suggestions, showcasing practical ML application in interactive web apps.',
+    imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/Cine-AI-Movie-Recommendation-System/main/CineAI.gif?raw=true',
+    imageHint: 'movie recommendations interface',
+    demoUrl: 'https://www.youtube.com/watch?v=F6STdcI0zDA',
+    demoButtonText: 'View Demo',
+    codeUrl: 'https://github.com/shubhangikatariyar/Cine-AI-Movie-Recommendation-System/',
+  },
+  {
+    id: '3',
     title: 'Sahayak Bot - Pick and Place Bot',
     description: 'Engineered a robotic arm system, "Sahayak Bot", for automated pick-and-place tasks. The project involved integrating computer vision for object detection and robotics for precise manipulation.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/Sahayak-Bot/main/pick_and_place.gif?raw=true',
@@ -23,7 +33,7 @@ const projectsData: Project[] = [
     codeUrl: 'https://github.com/shubhangikatariyar/Sahayak-Bot',
   },
   {
-    id: '3',
+    id: '4',
     title: 'Hippi Hangry Game',
     description: 'A vibrant 2D arcade game built with Unity (C#), where players control a hungry hippie dodging dangers to eat watermelons. Key features include custom physics, event-driven scoring, and performance optimizations like object pooling.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/HippiHangryGame/main/Hippi.gif?raw=true',
@@ -33,7 +43,7 @@ const projectsData: Project[] = [
     codeUrl: 'https://github.com/shubhangikatariyar/HippiHangryGame',
   },
   {
-    id: '4',
+    id: '5',
     title: 'LED Chaser Using 8051',
     description: 'A simple yet fascinating project that demonstrates the use of the 8051 microcontroller to create a chaser effect with LEDs.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/LED-Chaser-Using-8051/main/led.gif?raw=true',
