@@ -54,7 +54,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased h-full`}>
         <div className="fixed inset-0 -z-20">
           <Image
-            src="https://raw.githubusercontent.com/shubhangikatariyar/shubhangikatariyar.github.io/master/public/background-image.jpg"
+            src="https://raw.githubusercontent.com/shubhangikatariyar/studio/master/public/background-image.jpg"
             alt="Abstract background"
             fill
             className="object-cover"
