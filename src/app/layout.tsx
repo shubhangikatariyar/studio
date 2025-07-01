@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Image from 'next/image';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -51,6 +52,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased h-full`}>
+        <div className="fixed inset-0 -z-20">
+          <Image
+            src="https://raw.githubusercontent.com/shubhangikatariyar/studio/master/public/background-image.jpg"
+            alt="Abstract background"
+            layout="fill"
+            objectFit="cover"
+            quality={80}
+            priority
+          />
+        </div>
+        <div className="fixed inset-0 -z-10 bg-black/60"></div>
         <InitializeTheme />
         <TooltipProvider>
           {children}
