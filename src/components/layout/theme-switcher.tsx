@@ -14,14 +14,11 @@ export function ThemeSwitcher() {
   useEffect(() => {
     setMounted(true);
     const storedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     if (storedTheme) {
       setTheme(storedTheme);
-    } else if (systemPrefersDark) {
-      setTheme('dark');
     } else {
-      // Default to dark if no stored theme and no system preference for dark
+      // If no theme is stored in localStorage, default to 'dark'.
       setTheme('dark');
     }
   }, []);
