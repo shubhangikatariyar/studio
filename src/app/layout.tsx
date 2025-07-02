@@ -62,8 +62,8 @@ export default function RootLayout({
             priority
           />
           <Image
-            src="/studio/background-image-2.jpg"
-            alt="Abstract light background"
+            src="/studio/White-background.png"
+            alt="Abstract white background"
             fill
             className="object-cover block dark:hidden"
             quality={80}
