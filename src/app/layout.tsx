@@ -23,7 +23,7 @@ const InitializeTheme = () => {
       let theme = 'dark'; // Default to dark
       try {
         const storedTheme = localStorage.getItem('theme');
-        if (storedTheme === 'light' || 'dark') { // Check for valid theme values
+        if (storedTheme === 'light' || storedTheme === 'dark') { // Check for valid theme values
           theme = storedTheme;
         } else {
           // If no valid stored theme, 'theme' remains 'dark' (our default).
@@ -53,15 +53,24 @@ export default function RootLayout({
     <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased h-full`}>
         <div className="fixed inset-0 -z-20">
-          <Image
+           <Image
             src="/studio/background-image.jpg"
-            alt="Abstract background"
+            alt="Abstract dark background"
             fill
-            className="object-cover"
+            className="object-cover hidden dark:block"
             quality={80}
+            priority
+          />
+          <Image
+            src="/studio/background-image-2.jpg"
+            alt="Abstract light background"
+            fill
+            className="object-cover block dark:hidden"
+            quality={80}
+            priority
           />
         </div>
-        <div className="fixed inset-0 -z-10 bg-black/60"></div>
+        <div className="fixed inset-0 -z-10 bg-white/20 dark:bg-black/60"></div>
         <InitializeTheme />
         <TooltipProvider>
           {children}
