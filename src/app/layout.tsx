@@ -54,7 +54,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased h-full`}>
         <div className="fixed inset-0 -z-20">
            <Image
-            src="/background-image.jpg"
+            src="/studio/background-image.jpg"
             alt="Abstract dark background"
             fill
             className="object-cover hidden dark:block"
@@ -62,7 +62,7 @@ export default function RootLayout({
             priority
           />
           <Image
-            src="/White-background.png"
+            src="/studio/White-background.png"
             alt="Abstract white background"
             fill
             className="object-cover block dark:hidden"
