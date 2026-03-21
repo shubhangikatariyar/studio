@@ -4,7 +4,6 @@ Welcome to my portfolio! This site showcases my projects, skills, and experience
 
 
 
-This project was built and deployed using Firebase Studio and is hosted on GitHub Pages.
 
 
 
