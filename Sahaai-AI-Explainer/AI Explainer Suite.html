@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Explainer Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #f0f9ff;
+            --accent-blue: #3b82f6;
+            --sidebar-width: 300px;
+        }
+
+
+        body {
+            background-color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            color: #1e293b;
+            overflow: hidden;
+        }
+
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: white;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            border-right: 1px solid #e2e8f0;
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .main-content {
+            margin-left: var(--sidebar-width);
+            height: 100vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            scroll-behavior: smooth;
+        }
+
+
+        .feature-card {
+            background: white;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            padding: 2rem;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 2.5rem;
+            position: relative;
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+
+        .input-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            outline: none;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            background-color: #fcfcfd;
+        }
+
+
+        .form-input:focus {
+            border-color: #3b82f6;
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+        }
+
+
+        .add-feature-btn {
+            background: #2563eb;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+
+        .add-feature-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+
+        .range-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            outline: none;
+        }
+
+
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #3b82f6;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+
+        .modal-overlay {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+        .component-badge {
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+
+        .badge-explainer { background: #dbeafe; color: #1e40af; }
+        .badge-simplifier { background: #fef9c3; color: #854d0e; }
+        .badge-summarizer { background: #dcfce7; color: #166534; }
+        .badge-elaborator { background: #f3e8ff; color: #6b21a8; }
+
+
+        .summary-table-container {
+            max-width: 1100px;
+            width: 100%;
+            margin-top: 4rem;
+            margin-bottom: 5rem;
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .json-payload-cell {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.7rem;
+            color: #334155;
+            background: #f8fafc;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            white-space: pre-wrap;
+            max-height: 120px;
+            overflow-y: auto;
+            min-width: 300px;
+        }
+
+
+        @media (max-width: 768px) {
+            .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+            .sidebar.open { transform: translateX(0); }
+            .main-content { margin-left: 0; padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="p-8 border-b">
+            <h1 class="text-xl font-black text-slate-800 flex items-center gap-2 tracking-tight uppercase">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                    <i class="fas fa-microchip text-sm"></i>
+                </div>
+                AI EXPLAINER
+            </h1>
+        </div>
+
+
+        <div class="p-6">
+            <button onclick="toggleModal(true)" class="add-feature-btn w-full justify-center mb-8">
+                <i class="fas fa-plus-circle"></i>
+                ADD NEW FEATURE
+            </button>
+
+
+            <div class="space-y-1">
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 ml-2">Active Modules</p>
+                <div id="sidebarList" class="space-y-1">
+                    <div class="text-xs text-slate-400 italic p-3 text-center bg-slate-50 rounded-lg border border-dashed">
+                        No features added
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mt-auto p-6 border-t bg-slate-50">
+            <div class="flex items-center gap-3 text-[10px] font-bold text-slate-400 uppercase">
+                RBI PERSPECTIVE | v1.5.0
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="max-w-5xl mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-800">AI Explainer Builder</h2>
+                <p class="text-slate-500 mt-1">Configure your regulatory analysis engine.</p>
+            </div>
+            <div id="statsCount" class="text-xs font-bold text-slate-400 bg-white px-4 py-2 rounded-full border">
+                0 FEATURES ACTIVE
+            </div>
+        </header>
+
+
+        <div id="workspace" class="flex flex-col items-center">
+            <div id="emptyState" class="mt-20 text-center">
+                <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-300">
+                    <i class="fas fa-layer-group text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-700">Workspace Empty</h3>
+                <p class="text-slate-500 max-w-xs mx-auto">Click "Add New Feature" to start building your configuration stack.</p>
+            </div>
+        </div>
+
+
+        <!-- AI EXPLAINER MANIFEST (Tabular View) -->
+        <div id="summarySection" class="hidden flex flex-col items-center">
+            <div class="summary-table-container">
+                <div class="bg-slate-50 p-6 border-b flex justify-between items-center">
+                    <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                        <i class="fas fa-table-list text-blue-600"></i>
+                        AI EXPLAINER MANIFEST
+                    </h3>
+                    <div class="flex gap-4 items-center">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Configuration Registry</span>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-white text-[10px] uppercase tracking-wider text-slate-500 font-bold border-b">
+                                <th class="p-4">Feature Name</th>
+                                <th class="p-4">Version</th>
+                                <th class="p-4">Config ID</th>
+                                <th class="p-4">Last Saved</th>
+                                <th class="p-4">JSON Config</th>
+                                <th class="p-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summaryTableBody" class="text-sm text-slate-600">
+                            <!-- Populated via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Picker Modal -->
+    <div id="pickerModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="modal-overlay absolute inset-0" onclick="toggleModal(false)"></div>
+        <div class="bg-white rounded-2xl w-full max-w-2xl relative shadow-2xl overflow-hidden border">
+            <div class="p-6 border-b flex justify-between items-center bg-slate-50">
+                <h3 class="font-bold text-slate-800 uppercase text-xs tracking-widest">Select Component</h3>
+                <button onclick="toggleModal(false)" class="text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div onclick="addFeature('explainer')" class="p-4 border rounded-xl hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all group">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors"><i class="fas fa-lightbulb"></i></div>
+                    <h4 class="font-bold text-slate-800">Explainer</h4>
+                </div>
+                <div onclick="addFeature('simplifier')" class="p-4 border rounded-xl hover:border-yellow-500 hover:bg-yellow-50 cursor-pointer transition-all group">
+                    <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center text-yellow-600 mb-3 group-hover:bg-yellow-600 group-hover:text-white transition-colors"><i class="fas fa-compress-alt"></i></div>
+                    <h4 class="font-bold text-slate-800">Simplifier</h4>
+                </div>
+                <div onclick="addFeature('summarizer')" class="p-4 border rounded-xl hover:border-green-500 hover:bg-green-50 cursor-pointer transition-all group">
+                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-3 group-hover:bg-green-600 group-hover:text-white transition-colors"><i class="fas fa-list-ul"></i></div>
+                    <h4 class="font-bold text-slate-800">Summarizer</h4>
+                </div>
+                <div onclick="addFeature('elaborator')" class="p-4 border rounded-xl hover:border-purple-500 hover:bg-purple-50 cursor-pointer transition-all group">
+                    <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors"><i class="fas fa-expand-alt"></i></div>
+                    <h4 class="font-bold text-slate-800">Elaborator</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-10 right-10 bg-slate-800 text-white px-6 py-4 rounded-xl shadow-2xl translate-y-20 opacity-0 transition-all duration-300 z-[200] flex items-center gap-3">
+        <div id="toastIcon" class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"><i class="fas fa-check text-xs"></i></div>
+        <div>
+            <p id="toastTitle" class="font-bold text-sm">Update Confirmed</p>
+            <p id="toastMsg" class="text-xs text-slate-400">Configuration saved to manifest.</p>
+        </div>
+    </div>
+
+
+    <script>
+        let features = [];
+
+
+        function toggleModal(show) {
+            document.getElementById('pickerModal').classList.toggle('hidden', !show);
+        }
+
+
+        function addFeature(type) {
+            const shortId = Math.random().toString(36).substr(2, 6).toUpperCase();
+            const id = 'ID-' + shortId;
+            features.push({ 
+                id, 
+                type, 
+                name: type.charAt(0).toUpperCase() + type.slice(1),
+                version: "1.0.0",
+                lastSaved: "Not saved",
+                payload: null
+            });
+            renderWorkspace();
+            renderSummaryTable();
+            toggleModal(false);
+            showNotification('New Module', `Feature ${type.toUpperCase()} created.`);
+        }
+
+
+        function removeFeature(id) {
+            features = features.filter(f => f.id !== id);
+            renderWorkspace();
+            renderSummaryTable();
+        }
+
+
+        function saveConfig(id) {
+            const feature = features.find(f => f.id === id);
+            const card = document.getElementById(id);
+            if (!feature || !card) return;
+
+
+            const configData = {};
+            const inputs = card.querySelectorAll('select, input, textarea');
+            
+            inputs.forEach((input) => {
+                let key = input.getAttribute('name') || 
+                          input.previousElementSibling?.innerText?.trim().toLowerCase().replace(/\s+/g, '_') || 
+                          input.parentElement?.querySelector('label')?.innerText?.trim().toLowerCase().replace(/\s+/g, '_') ||
+                          'field';
+                
+                key = key.replace(/[^a-z0-9_]/g, '');
+
+
+                if (input.type === 'checkbox') {
+                    configData[key] = input.checked;
+                } else if (input.type === 'number' || input.type === 'range') {
+                    configData[key] = parseFloat(input.value);
+                } else {
+                    configData[key] = input.value;
+                }
+            });
+
+
+            // Metadata update
+            feature.payload = JSON.stringify(configData, null, 2);
+            feature.lastSaved = new Date().toLocaleString();
+            
+            // Increment minor version
+            const parts = feature.version.split('.');
+            parts[2] = parseInt(parts[2]) + 1;
+            feature.version = parts.join('.');
+
+
+            renderSummaryTable();
+            showNotification('Manifest Updated', `Config ${id} saved as JSON.`);
+        }
+
+
+        function renderWorkspace() {
+            const workspace = document.getElementById('workspace');
+            const sidebarList = document.getElementById('sidebarList');
+            const emptyState = document.getElementById('emptyState');
+            const summarySection = document.getElementById('summarySection');
+
+
+            if (features.length === 0) {
+                workspace.innerHTML = ''; workspace.appendChild(emptyState);
+                sidebarList.innerHTML = `<div class="text-xs text-slate-400 italic p-3 text-center bg-slate-50 rounded-lg border border-dashed">No active components</div>`;
+                document.getElementById('statsCount').innerText = "0 FEATURES ACTIVE";
+                summarySection.classList.add('hidden');
+                return;
+            }
+
+
+            workspace.innerHTML = ''; sidebarList.innerHTML = '';
+            document.getElementById('statsCount').innerText = `${features.length} FEATURES ACTIVE`;
+            summarySection.classList.remove('hidden');
+
+
+            features.forEach((feature, index) => {
+                const card = document.createElement('div');
+                card.className = 'feature-card';
+                card.id = feature.id;
+                card.innerHTML = getComponentTemplate(feature.type, feature.id, index + 1);
+                workspace.appendChild(card);
+
+
+                const sideItem = document.createElement('div');
+                sideItem.className = "flex items-center justify-between p-3 hover:bg-slate-50 rounded-lg cursor-pointer group border border-transparent hover:border-slate-200 transition-colors";
+                sideItem.innerHTML = `
+                    <div class="flex items-center gap-3" onclick="document.getElementById('${feature.id}').scrollIntoView({behavior: 'smooth'})">
+                        <span class="w-6 h-6 flex items-center justify-center rounded bg-slate-100 text-[10px] font-bold text-slate-500">${index + 1}</span>
+                        <span class="text-xs font-bold text-slate-700 uppercase tracking-tighter">${feature.name}</span>
+                    </div>
+                    <button onclick="removeFeature('${feature.id}')" class="text-slate-300 hover:text-red-500 opacity-0 group-hover:opacity-100"><i class="fas fa-trash-alt text-xs"></i></button>
+                `;
+                sidebarList.appendChild(sideItem);
+            });
+        }
+
+
+        function renderSummaryTable() {
+            const tbody = document.getElementById('summaryTableBody');
+            tbody.innerHTML = '';
+
+
+            features.forEach(f => {
+                const row = document.createElement('tr');
+                row.className = "border-b hover:bg-slate-50 transition-colors align-top";
+                row.innerHTML = `
+                    <td class="p-4">
+                        <span class="component-badge badge-${f.type}">${f.type}</span>
+                    </td>
+                    <td class="p-4 text-[10px] font-mono font-bold text-slate-400">v${f.version}</td>
+                    <td class="p-4 font-mono text-xs font-bold text-blue-600">${f.id}</td>
+                    <td class="p-4 text-[11px] text-slate-500 leading-tight">${f.lastSaved}</td>
+                    <td class="p-4">
+                        <pre class="json-payload-cell">${f.payload || '// Save configuration to view JSON payload'}</pre>
+                    </td>
+                    <td class="p-4 text-right">
+                        <div class="flex flex-col gap-2 items-end">
+                            <button onclick="document.getElementById('${f.id}').scrollIntoView({behavior:'smooth'})" class="text-[10px] font-bold text-blue-600 hover:underline uppercase">Edit Config</button>
+                            <button onclick="removeFeature('${f.id}')" class="text-[10px] font-bold text-red-400 hover:text-red-600 uppercase">Delete</button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+
+        function getComponentTemplate(type, id, index) {
+            const header = `
+                <div class="flex items-center justify-between mb-8 border-b pb-4">
+                    <div class="flex items-center gap-4">
+                        <div class="text-3xl font-black text-slate-100">${index}</div>
+                        <div>
+                            <span class="component-badge badge-${type}">${type}</span>
+                            <h3 class="text-lg font-bold text-slate-800 mt-1 uppercase tracking-tight">${type} Settings</h3>
+                            <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Config ID: ${id}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+
+            const saveBtn = `
+                <div class="mt-6 bg-[#f0f9ff] border border-[#bae6fd] p-5 rounded-xl flex items-center gap-4 hover:border-[#7dd3fc] transition-colors">
+                    <input type="checkbox" id="context_${id}" name="add_context" class="w-5 h-5 accent-blue-600 cursor-pointer">
+                    <label for="context_${id}" class="font-bold text-slate-700 text-sm cursor-pointer select-none flex-1">Add Context <span class="text-blue-600 font-semibold ml-2 bg-white px-2 py-0.5 rounded shadow-sm text-[10px] border border-blue-100 uppercase tracking-widest">Enlarged Knowledge Base</span></label>
+                </div>
+                <div class="mt-8 pt-6 border-t flex justify-end">
+                    <button onclick="saveConfig('${id}')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-xs transition-all shadow-md uppercase tracking-widest">
+                        Save Configuration
+                    </button>
+                </div>
+            `;
+
+
+            if (type === 'explainer') {
+                return header + `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-5">
+                            <div><label class="input-label">Set Tone</label><select class="form-input bg-white"><option>Legal</option><option>Formal</option><option>Fluent</option></select></div>
+                            <div><label class="input-label">Output Words</label><input type="number" class="form-input" value="500"></div>
+                            <div><label class="input-label">Output Format</label><select class="form-input bg-white"><option>Paragraph</option><option>Bullets</option></select></div>
+                        </div>
+                        <div><label class="input-label">Add Instructions</label><textarea rows="4" class="form-input resize-none h-[178px]" placeholder="Specific handling..."></textarea></div>
+                    </div>
+                    <div class="mt-8 bg-blue-50 border p-5 rounded-xl flex items-center justify-between">
+                        <div class="flex items-center gap-4"><input type="checkbox" id="check_${id}" class="w-5 h-5 accent-blue-600"><label for="check_${id}" class="font-bold text-slate-700 text-sm">Explain with Example</label></div>
+                        <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase">Count: <input type="number" value="1" class="w-16 p-2 border rounded-lg text-center bg-white"></div>
+                    </div>
+                ` + saveBtn;
+            }
+
+
+            if (type === 'simplifier') {
+                return header + `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="space-y-5">
+                            <div><label class="input-label">Set Tone</label><select class="form-input bg-white"><option>Formal</option><option>Fluent</option></select></div>
+                            <div><label class="input-label">Output Words</label><input type="number" class="form-input" value="200"></div>
+                        </div>
+                        <div><label class="input-label">Add Instructions</label><textarea rows="4" class="form-input resize-none h-[115px]"></textarea></div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border rounded-xl border-dashed">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div><label class="input-label">Vocab Level</label><select class="form-input bg-white"><option>Basic</option><option selected>Intermediate</option></select></div>
+                            <div><label class="input-label">Domain Persistence</label><select class="form-input bg-white"><option>True</option><option>False</option></select></div>
+                            <div><label class="input-label">Custom Term</label><input type="text" class="form-input" placeholder="e.g. CRR"></div>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-slate-50 border p-5 rounded-xl flex items-center justify-between">
+                        <div class="flex items-center gap-4"><input type="checkbox" id="check_${id}" class="w-5 h-5 accent-blue-600"><label for="check_${id}" class="font-bold text-slate-700 text-sm">Simplify with Example</label></div>
+                        <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase">Count: <input type="number" value="1" class="w-16 p-2 border rounded-lg text-center bg-white"></div>
+                    </div>
+                ` + saveBtn;
+            }
+
+
+            if (type === 'summarizer') {
+                return header + `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="space-y-5">
+                            <div><label class="input-label">Set Tone</label><select class="form-input bg-white"><option>Formal</option><option>Fluent</option></select></div>
+                            <div><label class="input-label">Output Format</label><select class="form-input bg-white"><option>Paragraph</option><option>Bullets</option></select></div>
+                        </div>
+                        <div><label class="input-label">Add Instructions</label><textarea rows="4" class="form-input resize-none h-[115px]"></textarea></div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border rounded-xl border-dashed">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <div><label class="input-label">Content Length</label><select class="form-input bg-white"><option>Short</option><option selected>Medium</option></select></div>
+                            <div><label class="input-label">Domain</label><select class="form-input bg-white"><option>Policy</option></select></div>
+                            <div><label class="input-label">Sub-Domain</label><select class="form-input bg-white"><option>IT Policy</option></select></div>
+                        </div>
+                        <div><label class="input-label">Length Limit Slider</label><input type="range" min="0" max="300" value="150" class="range-slider"></div>
+                    </div>
+                ` + saveBtn;
+            }
+
+
+            if (type === 'elaborator') {
+                return header + `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="space-y-5">
+                            <div><label class="input-label">Set Tone</label><select class="form-input bg-white"><option>Formal</option></select></div>
+                            <div><label class="input-label">Output Format</label><select class="form-input bg-white"><option>Paragraph</option></select></div>
+                        </div>
+                        <div><label class="input-label">Technical Instructions</label><textarea rows="3" class="form-input resize-none h-[115px]"></textarea></div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border rounded-xl border-dashed">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                            <div><label class="input-label">Detail Flow</label><select class="form-input bg-white"><option selected>Mixed</option><option>Mechanism</option></select></div>
+                            <div><label class="input-label">Elaboration Depth</label><input type="range" min="1" max="5" value="3" class="range-slider"></div>
+                        </div>
+                    </div>
+                ` + saveBtn;
+            }
+        }
+
+
+        function showNotification(title, msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').innerText = title;
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 3000);
+        }
+
+
+        window.onload = () => renderWorkspace();
+    </script>
+</body>
+</html>
