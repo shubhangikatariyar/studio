@@ -12,7 +12,7 @@ const socialLinks: SocialLink[] = [
 
 const contactProfileData = {
   name: 'Shubhangi Katariyar',
-  resumeUrl: `/resume.pdf`,
+  resumeUrl: `/studio/resume.pdf`,
 };
 
 export function ContactSection() {
