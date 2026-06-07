@@ -25,7 +25,7 @@ export function ContactSection() {
         </h2>
         <div className="mb-10">
           <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-            <a href={contactProfileData.resumeUrl} download>
+            <a href={contactProfileData.resumeUrl} download="Shubhangi_Resume.pdf">
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </a>
