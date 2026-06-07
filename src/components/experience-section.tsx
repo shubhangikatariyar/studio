@@ -7,9 +7,34 @@ import { Building, CalendarDays } from 'lucide-react';
 const experienceData: ExperienceEntry[] = [
   {
     id: '1',
+    company: 'Reserve Bank Information Technology',
+    role: 'Data Scientist',
+    dates: 'Nov 2025 - Aug 2026',
+    description: [
+      {
+        title: 'Enterprise GenAI Platform',
+        text: 'Architected a low-code generative AI platform empowering business users to construct RAG-powered knowledge repositories from vast corporate document stores. This foundational infrastructure significantly accelerated the deployment of customized AI applications across multiple domains without showcasing explicit metric dependencies.',
+      },
+      {
+        title: 'Advanced Retrieval Systems',
+        text: 'Designed and optimized robust retrieval pipelines utilizing diverse mechanisms, including entity-based, section-wise, and research-driven chunking strategies. This conceptual approach fundamentally improved context relevance and factual grounding for downstream LLM applications.',
+      },
+      {
+        title: 'Production-Grade AI Solutions',
+        text: 'Helmed cross-functional efforts to engineer and deploy comprehensive AI systems spanning document intelligence, OCR, automated invoice processing, and anomaly detection. These intelligent tools integrated seamlessly into broader enterprise workflows, enhancing overall operational efficiency.',
+      },
+      {
+        title: 'Agentic Conversational Interfaces',
+        text: 'Developed a sophisticated agentic chatbot that allows users to fluently interact with complex enterprise data via natural language. This automated the analytical query generation process and sustainably democratized access to critical business insights.',
+      },
+    ],
+    logoUrl: '/rebit-logo.png',
+  },
+  {
+    id: '2',
     company: 'Tata Consultancy Services Limited',
     role: 'AI Engineer',
-    dates: 'June 2022 - Aug 2025',
+    dates: 'Jun 2022 - Oct 2025',
     description: [
       {
         title: 'Responsible AI Framework',
@@ -35,10 +60,10 @@ const experienceData: ExperienceEntry[] = [
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Tata_Consultancy_Services_old_logo.svg',
   },
   {
-    id: '2',
+    id: '3',
     company: 'Tata Consultancy Services Limited',
     role: 'NLP Intern',
-    dates: 'March 2022 - May 2022',
+    dates: 'Mar 2022 - May 2022',
     description: [
       'Designed and implemented transformer-based models for patent classification, leveraging USPTO data to capture technical and legal nuances.',
       'Engineered an optimized text processing pipeline integrating advanced tokenization and semantic feature extraction techniques.',
