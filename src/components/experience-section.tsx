@@ -28,7 +28,7 @@ const experienceData: ExperienceEntry[] = [
         text: 'Developed a sophisticated agentic chatbot that allows users to fluently interact with complex enterprise data via natural language. This automated the analytical query generation process and sustainably democratized access to critical business insights.',
       },
     ],
-    logoUrl: '/rebit-logo.png',
+    logoUrl: '/studio/rebit-logo.png',
   },
   {
     id: '2',
