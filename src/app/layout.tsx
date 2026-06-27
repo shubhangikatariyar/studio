@@ -62,7 +62,7 @@ export default function RootLayout({
             priority
           />
           <Image
-            src="/studio/abstract-network-bg.jpg"
+            src="/studio/abstract-network-bg-dense.jpg"
             alt="Abstract network white background"
             fill
             className="object-cover block dark:hidden"
