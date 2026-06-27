@@ -6,16 +6,10 @@ import { Card, CardContent } from '@/components/ui/card';
 const profileData = {
   name: 'Shubhangi Katariyar',
   profileImageUrl: '/studio/profile-picture.jpg',
-  aboutMeParagraphs: [
-    "Hello there!",
-    "I am a Machine Learning graduate student at the University of Wisconsin–Madison, bringing over four years of industry experience in architecting and deploying scalable AI solutions. My professional background includes impactful roles at Tata Consultancy Services (TCS) and Reserve Bank Information Technology (ReBIT).",
-    "My technical expertise centers around Responsible AI, Natural Language Processing (NLP), and the development of intelligent Chatbots and Autonomous Agents. I am deeply passionate about translating complex data into robust, real-world machine learning systems that solve challenging problems.",
-    "I am actively exploring new opportunities in the AI and ML space. Let’s connect and build the future of AI together!"
-  ],
 };
 
 export function AboutSection() {
-  const { name, profileImageUrl, aboutMeParagraphs } = profileData;
+  const { name, profileImageUrl } = profileData;
 
   return (
     <section id="about" className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
@@ -31,12 +25,42 @@ export function AboutSection() {
         <div className="mt-12">
           <Card className="max-w-3xl mx-auto shadow-xl bg-card text-card-foreground">
             <CardContent className="p-6 md:p-8">
-              <div className="space-y-4 text-lg text-left leading-relaxed">
-                {aboutMeParagraphs.map((paragraph, index) => (
-                  <p key={index}>
-                    {paragraph}
-                  </p>
-                ))}
+              <div className="space-y-6 text-lg text-left leading-relaxed">
+                <p>Hello there!</p>
+                <p>
+                  I am a Machine Learning graduate student at the{' '}
+                  <strong className="font-semibold text-foreground">University of Wisconsin–Madison</strong>
+                  , bringing over four years of industry experience in architecting and deploying scalable AI solutions.
+                  My professional background includes impactful roles at{' '}
+                  <strong className="font-semibold text-foreground">Tata Consultancy Services (TCS)</strong> and{' '}
+                  <strong className="font-semibold text-foreground">Reserve Bank Information Technology (ReBIT)</strong>.
+                </p>
+                <p>
+                  My technical expertise centers around{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Responsible AI
+                  </span>
+                  ,{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Natural Language Processing (NLP)
+                  </span>
+                  , and the development of intelligent{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Chatbots
+                  </span>{' '}
+                  and{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Autonomous Agents
+                  </span>
+                  . I am deeply passionate about translating complex data into robust, real-world{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    machine learning systems
+                  </span>{' '}
+                  that solve challenging problems.
+                </p>
+                <p>
+                  I am actively exploring new opportunities in the AI and ML space. Let’s connect and build the future of AI together!
+                </p>
               </div>
             </CardContent>
           </Card>
