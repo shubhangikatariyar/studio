@@ -8,7 +8,7 @@ const profileData = {
   profileImageUrl: '/studio/profile-picture.jpg',
   aboutMeParagraphs: [
     "Hello there!",
-    "I am an incoming Machine Learning graduate student at the University of Wisconsin–Madison, bringing over four years of industry experience in architecting and deploying scalable AI solutions. My professional background includes impactful roles at Tata Consultancy Services (TCS) and Reserve Bank Information Technology (ReBIT).",
+    "I am a Machine Learning graduate student at the University of Wisconsin–Madison, bringing over four years of industry experience in architecting and deploying scalable AI solutions. My professional background includes impactful roles at Tata Consultancy Services (TCS) and Reserve Bank Information Technology (ReBIT).",
     "My technical expertise centers around Responsible AI, Natural Language Processing (NLP), and the development of intelligent Chatbots and Autonomous Agents. I am deeply passionate about translating complex data into robust, real-world machine learning systems that solve challenging problems.",
     "I am actively exploring new opportunities in the AI and ML space. Let’s connect and build the future of AI together!"
   ],
