@@ -30,7 +30,7 @@ export function AboutSection() {
                 <p>
                   I am a <strong className="font-bold text-foreground">Machine Learning graduate student</strong> at the{' '}
                   <strong className="font-bold text-primary">University of Wisconsin–Madison</strong>
-                  , bringing over four years of industry experience in architecting and deploying scalable AI solutions.
+                  , bringing <strong className="font-bold text-foreground">4+ years</strong> of industry experience in architecting and deploying scalable AI solutions.
                   My professional background includes impactful roles at{' '}
                   <strong className="font-bold text-primary">Tata Consultancy Services (TCS)</strong> and{' '}
                   <strong className="font-bold text-primary">Reserve Bank Information Technology (ReBIT)</strong>.
