@@ -28,7 +28,7 @@ export function AboutSection() {
               <div className="space-y-6 text-lg text-left leading-relaxed">
                 <p>Hello there!</p>
                 <p>
-                  I am a Machine Learning graduate student at the{' '}
+                  I am a <strong className="font-bold text-foreground">Machine Learning graduate student</strong> at the{' '}
                   <strong className="font-bold text-primary">University of Wisconsin–Madison</strong>
                   , bringing over four years of industry experience in architecting and deploying scalable AI solutions.
                   My professional background includes impactful roles at{' '}
@@ -36,7 +36,11 @@ export function AboutSection() {
                   <strong className="font-bold text-primary">Reserve Bank Information Technology (ReBIT)</strong>.
                 </p>
                 <p>
-                  My technical expertise centers around Responsible AI, Natural Language Processing (NLP), and the development of intelligent Chatbots and Autonomous Agents. I am deeply passionate about translating complex data into robust, real-world machine learning systems that solve challenging problems.
+                  My technical expertise centers around <strong className="font-bold text-foreground">Responsible AI</strong>,{' '}
+                  <strong className="font-bold text-foreground">Natural Language Processing (NLP)</strong>, and the development of intelligent{' '}
+                  <strong className="font-bold text-foreground">Chatbots</strong> and{' '}
+                  <strong className="font-bold text-foreground">Autonomous Agents</strong>. I am deeply passionate about translating complex data into robust, real-world{' '}
+                  <strong className="font-bold text-foreground">machine learning systems</strong> that solve challenging problems.
                 </p>
                 <p>
                   I am actively exploring new opportunities in the AI and ML space. Let’s connect and build the future of AI together!
