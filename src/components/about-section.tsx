@@ -36,26 +36,11 @@ export function AboutSection() {
                 </p>
                 <p>
                   My technical expertise centers around{' '}
-                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
-                    Responsible AI
-                  </span>
-                  ,{' '}
-                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
-                    Natural Language Processing (NLP)
-                  </span>
-                  , and the development of intelligent{' '}
-                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
-                    Chatbots
-                  </span>{' '}
-                  and{' '}
-                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
-                    Autonomous Agents
-                  </span>
-                  . I am deeply passionate about translating complex data into robust, real-world{' '}
-                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
-                    machine learning systems
-                  </span>{' '}
-                  that solve challenging problems.
+                  <strong className="font-bold text-foreground">Responsible AI</strong>,{' '}
+                  <strong className="font-bold text-foreground">Natural Language Processing (NLP)</strong>, and the development of intelligent{' '}
+                  <strong className="font-bold text-foreground">Chatbots</strong> and{' '}
+                  <strong className="font-bold text-foreground">Autonomous Agents</strong>. I am deeply passionate about translating complex data into robust, real-world{' '}
+                  <strong className="font-bold text-foreground">machine learning systems</strong> that solve challenging problems.
                 </p>
                 <p>
                   I am actively exploring new opportunities in the AI and ML space. Let’s connect and build the future of AI together!
