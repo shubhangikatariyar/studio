@@ -1,5 +1,4 @@
 
-import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -21,26 +20,42 @@ export function AboutSection() {
           </Avatar>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground">{name}</h1>
         </div>
-        
+
         <div className="mt-12">
           <Card className="max-w-3xl mx-auto shadow-xl bg-card text-card-foreground">
             <CardContent className="p-6 md:p-8">
               <div className="space-y-6 text-lg text-left leading-relaxed">
                 <p>Hello there!</p>
                 <p>
-                  I am a <strong className="font-bold text-foreground">Machine Learning graduate student</strong> at the{' '}
+                  I am a Machine Learning graduate student at the{' '}
                   <strong className="font-bold text-primary">University of Wisconsin–Madison</strong>
-                  , bringing <strong className="font-bold text-foreground">4+ years</strong> of industry experience in architecting and deploying scalable AI solutions.
+                  , bringing over four years of industry experience in architecting and deploying scalable AI solutions.
                   My professional background includes impactful roles at{' '}
-                  <strong className="font-bold text-primary">Tata Consultancy Services (TCS)</strong> and{' '}
-                  <strong className="font-bold text-primary">Reserve Bank Information Technology (ReBIT)</strong>.
+                  <strong className="font-bold text-foreground">Tata Consultancy Services (TCS)</strong> and{' '}
+                  <strong className="font-bold text-foreground">Reserve Bank Information Technology (ReBIT)</strong>.
                 </p>
                 <p>
-                  My technical expertise centers around <strong className="font-bold text-foreground">Responsible AI</strong>,{' '}
-                  <strong className="font-bold text-foreground">Natural Language Processing (NLP)</strong>, and the development of intelligent{' '}
-                  <strong className="font-bold text-foreground">Chatbots</strong> and{' '}
-                  <strong className="font-bold text-foreground">Autonomous Agents</strong>. I am deeply passionate about translating complex data into robust, real-world{' '}
-                  <strong className="font-bold text-foreground">machine learning systems</strong> that solve challenging problems.
+                  My technical expertise centers around{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Responsible AI
+                  </span>
+                  ,{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Natural Language Processing (NLP)
+                  </span>
+                  , and the development of intelligent{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Chatbots
+                  </span>{' '}
+                  and{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    Autonomous Agents
+                  </span>
+                  . I am deeply passionate about translating complex data into robust, real-world{' '}
+                  <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 text-base font-medium align-middle">
+                    machine learning systems
+                  </span>{' '}
+                  that solve challenging problems.
                 </p>
                 <p>
                   I am actively exploring new opportunities in the AI and ML space. Let’s connect and build the future of AI together!
