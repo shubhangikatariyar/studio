@@ -15,6 +15,15 @@ const projectsData: Project[] = [
   },
   {
     id: '2',
+    title: 'Machine Learning Framework for Breast, Lung, and Liver Cancer Detection',
+    description: 'Developed a machine learning framework to enhance prediction accuracy for breast, lung, and liver cancers. The approach combines histopathological image analysis with health survey and demographic data using optimized Gradient Boosting models. This research was published in a Springer book chapter.',
+    imageUrl: '/studio/ML-Springer-Image-Paper-2.png',
+    imageHint: 'Cancer detection machine learning framework',
+    demoUrl: 'https://link.springer.com/chapter/10.1007/978-981-95-3616-0_9',
+    demoButtonText: 'View Paper'
+  },
+  {
+    id: '3',
     title: 'Cine AI: Movie Recommendation System',
     description: 'Developed a content-based movie recommendation system using NLP to analyze movie plots and generate similarity scores. The user-friendly interface, built with Streamlit and deployed on Heroku, provides personalized movie suggestions, showcasing practical ML application in interactive web apps.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/Cine-AI-Movie-Recommendation-System/main/CineAI.gif?raw=true',
@@ -24,7 +33,7 @@ const projectsData: Project[] = [
     codeUrl: 'https://github.com/shubhangikatariyar/Cine-AI-Movie-Recommendation-System/',
   },
   {
-    id: '3',
+    id: '4',
     title: 'Sahayak Bot - Pick and Place Bot',
     description: 'Engineered a robotic arm system, "Sahayak Bot", for automated pick-and-place tasks. The project involved integrating computer vision for object detection and robotics for precise manipulation.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/Sahayak-Bot/main/pick_and_place.gif?raw=true',
@@ -33,7 +42,7 @@ const projectsData: Project[] = [
     codeUrl: 'https://github.com/shubhangikatariyar/Sahayak-Bot',
   },
   {
-    id: '4',
+    id: '5',
     title: 'Hippi Hangry Game',
     description: 'A vibrant 2D arcade game built with Unity (C#), where players control a hungry hippie dodging dangers to eat watermelons. Key features include custom physics, event-driven scoring, and performance optimizations like object pooling.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/HippiHangryGame/main/Hippi.gif?raw=true',
@@ -43,7 +52,7 @@ const projectsData: Project[] = [
     codeUrl: 'https://github.com/shubhangikatariyar/HippiHangryGame',
   },
   {
-    id: '5',
+    id: '6',
     title: 'LED Chaser Using 8051',
     description: 'A simple yet fascinating project that demonstrates the use of the 8051 microcontroller to create a chaser effect with LEDs.',
     imageUrl: 'https://raw.githubusercontent.com/shubhangikatariyar/LED-Chaser-Using-8051/main/led.gif?raw=true',
