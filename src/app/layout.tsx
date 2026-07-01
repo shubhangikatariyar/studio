@@ -20,18 +20,18 @@ export const metadata: Metadata = {
 const InitializeTheme = () => {
   const script = `
     (function() {
-      let theme = 'dark'; // Default to dark
+      let theme = 'light'; // Default to light
       try {
         const storedTheme = localStorage.getItem('theme');
         if (storedTheme === 'light' || storedTheme === 'dark') { // Check for valid theme values
           theme = storedTheme;
         } else {
-          // If no valid stored theme, 'theme' remains 'dark' (our default).
-          // System preference check was previously removed to enforce dark default.
+          // If no valid stored theme, 'theme' remains 'light' (our default).
+          // System preference check was previously removed to enforce light default.
         }
       } catch (e) {
         // localStorage might not be available or accessible
-        // Theme remains 'dark' (our default)
+        // Theme remains 'light' (our default)
       }
       if (theme === 'dark') {
         document.documentElement.classList.add('dark');

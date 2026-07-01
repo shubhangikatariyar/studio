@@ -7,9 +7,9 @@ import { Button } from '@/components/ui/button';
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
-  // Initialize theme to 'dark' to prevent SSR/hydration mismatch for the initial render.
+  // Initialize theme to 'light' to prevent SSR/hydration mismatch for the initial render.
   // This will be the theme before useEffect runs.
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     setMounted(true);
@@ -18,8 +18,8 @@ export function ThemeSwitcher() {
     if (storedTheme) {
       setTheme(storedTheme);
     } else {
-      // If no theme is stored in localStorage, default to 'dark'.
-      setTheme('dark');
+      // If no theme is stored in localStorage, default to 'light'.
+      setTheme('light');
     }
   }, []);
 
@@ -42,10 +42,10 @@ export function ThemeSwitcher() {
 
   if (!mounted) {
     // Render a placeholder or null to avoid hydration mismatch with the icon
-    // A disabled button maintains layout space and shows the icon consistent with the initial 'dark' state.
+    // A disabled button maintains layout space and shows the icon consistent with the initial 'light' state.
     return (
       <Button variant="ghost" size="icon" className="w-9 h-9" disabled aria-label="Loading theme switcher">
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
+        <Moon className="h-[1.2rem] w-[1.2rem]" />
       </Button>
     );
   }
