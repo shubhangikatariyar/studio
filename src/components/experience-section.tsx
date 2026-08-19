@@ -9,7 +9,7 @@ const experienceData: ExperienceEntry[] = [
     id: '1',
     company: 'Reserve Bank Information Technology',
     role: 'Data Scientist',
-    dates: 'Nov 2025 - Aug 2026',
+    dates: 'Nov 2025 - Jul 2026',
     description: [
       {
         title: 'Enterprise GenAI Platform',
