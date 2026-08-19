@@ -34,7 +34,7 @@ const experienceData: ExperienceEntry[] = [
     id: '2',
     company: 'Tata Consultancy Services Limited',
     role: 'AI Engineer',
-    dates: 'Jun 2022 - Oct 2025',
+    dates: 'Jun 2022 - Nov 2025',
     description: [
       {
         title: 'Responsible AI Framework',
