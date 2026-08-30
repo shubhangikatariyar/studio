@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const profileData = {
   name: 'Shubhangi Katariyar',
-  profileImageUrl: '/studio/profile-picture.jpg',
+  profileImageUrl: '/studio/profile-picture.png',
 };
 
 export function AboutSection() {
