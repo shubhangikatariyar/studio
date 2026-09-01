@@ -54,23 +54,23 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased h-full`}>
         <div className="fixed inset-0 -z-20">
            <Image
-            src="/studio/background-image.jpg"
-            alt="Abstract dark background"
+            src="/studio/network-mesh-dark.jpg"
+            alt="Abstract neural constellation dark background"
             fill
             className="object-cover hidden dark:block"
-            quality={80}
+            quality={90}
             priority
           />
           <Image
-            src="/studio/abstract-network-bg-sparse.png"
-            alt="Abstract network white background"
+            src="/studio/network-mesh-light.png"
+            alt="Abstract neural constellation light background"
             fill
             className="object-cover block dark:hidden"
-            quality={80}
+            quality={90}
             priority
           />
         </div>
-        <div className="fixed inset-0 -z-10 bg-white/20 dark:bg-black/60"></div>
+        <div className="fixed inset-0 -z-10 bg-white/10 dark:bg-black/40 backdrop-blur-[0.5px]"></div>
         <InitializeTheme />
         <TooltipProvider>
           {children}
