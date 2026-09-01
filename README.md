@@ -1,4 +1,4 @@
-# Shubhangi Katariyar — AI Engineer Portfolio
+# Shubhangi Katariyar
 
 A personal portfolio showcasing machine learning research, generative AI systems, and engineering projects.
 
