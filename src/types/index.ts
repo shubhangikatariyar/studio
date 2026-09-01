@@ -3,7 +3,7 @@ import type { LucideIcon } from 'lucide-react';
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: LucideIcon;
+  icon: React.ComponentType<{ className?: string }>;
   ariaLabel: string;
 }
 

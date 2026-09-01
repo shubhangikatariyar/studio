@@ -14,19 +14,19 @@ export function AppHeader() {
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/15 transition-all duration-200">
             <Link href="#about">About</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/15 transition-all duration-200">
             <Link href="#education">Education</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/15 transition-all duration-200">
             <Link href="#experience">Experience</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/15 transition-all duration-200">
             <Link href="#projects">Projects</Link>
           </Button>
-          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/20">
+          <Button variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/15 transition-all duration-200">
             <Link href="#contact">Contact</Link>
           </Button>
         </nav>

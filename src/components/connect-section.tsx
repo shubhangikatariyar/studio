@@ -20,13 +20,18 @@ export function ConnectSection() {
           {socialLinks.map((link) => (
             <Tooltip key={link.platform}>
               <TooltipTrigger asChild>
-                <Button variant="outline" size="icon" asChild className="w-12 h-12 sm:w-14 sm:h-14 rounded-full">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  asChild
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-border/80 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 shadow-sm hover:shadow-md hover:scale-105"
+                >
                   <a
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={link.ariaLabel}
-                    className="text-primary hover:text-primary-foreground hover:bg-primary transition-colors"
+                    className="text-primary hover:text-primary-foreground transition-colors"
                   >
                     <link.icon className="w-6 h-6 sm:w-7 sm:h-7" />
                   </a>
