@@ -5,94 +5,94 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* Light Gray #fafafa */
-    --foreground: 0 0% 9%; /* Dark Gray #171717 */
+    --background: 0 0% 99%; /* Clean Off-White */
+    --foreground: 240 10% 10%; /* Rich Slate #18181b */
 
-    --card: 0 0% 100%; /* White #ffffff */
-    --card-foreground: 0 0% 9%; /* Dark Gray #171717 */
+    --card: 0 0% 100%; /* Pure White */
+    --card-foreground: 240 10% 10%;
 
     --popover: 0 0% 100%; /* White */
-    --popover-foreground: 0 0% 9%; /* Dark Gray */
+    --popover-foreground: 240 10% 10%;
 
-    --primary: 358 95% 40%; /* UW Madison Red */
+    --primary: 267 83% 53%; /* Electric Amethyst Violet #7c3aed */
     --primary-foreground: 0 0% 100%; /* White for text on primary */
 
-    --secondary: 0 0% 94%; /* Lighter Gray #f0f0f0 */
-    --secondary-foreground: 0 0% 9%; /* Dark Gray for text on secondary */
+    --secondary: 260 20% 96%; /* Soft Lilac-Gray Tint #f3f0f9 */
+    --secondary-foreground: 267 83% 40%;
 
-    --muted: 0 0% 90%; /* Muted Gray #e5e5e5 */
-    --muted-foreground: 0 0% 45%; /* Muted Text #737373 */
+    --muted: 240 5% 94%; /* Muted Gray */
+    --muted-foreground: 240 5% 45%; /* Muted Text */
 
-    --accent: 358 95% 40%; /* UW Madison Red */
-    --accent-foreground: 0 0% 100%; /* White for text on accent */
+    --accent: 38 92% 48%; /* Amber Gold Accent #d97706 */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%; /* #e5e5e5 slightly adjusted */
-    --input: 0 0% 89.8%; /* #e5e5e5 slightly adjusted */
-    --ring: 358 95% 40%; /* UW Madison Red for focus rings */
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 267 83% 53%; /* Electric Violet focus ring */
 
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --chart-1: 267 83% 53%; /* Violet */
+    --chart-2: 38 92% 48%;  /* Amber Gold */
+    --chart-3: 199 89% 48%; /* Tech Cyan */
+    --chart-4: 330 81% 56%; /* Magenta */
+    --chart-5: 160 84% 39%; /* Emerald */
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 9%;
-    --sidebar-primary: 358 95% 40%; /* UW Madison Red */
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 267 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 94%;
-    --sidebar-accent-foreground: 0 0% 9%;
-    --sidebar-border: 0 0% 89.8%;
-    --sidebar-ring: 358 95% 40%; /* UW Madison Red */
+    --sidebar-accent: 260 20% 96%;
+    --sidebar-accent-foreground: 267 83% 40%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 267 83% 53%;
   }
 
   .dark {
-    --background: 0 0% 9%; /* Dark Gray */
+    --background: 245 20% 6%; /* Deep Cosmic Obsidian */
     --foreground: 0 0% 98%; /* Light Gray / White */
 
-    --card: 0 0% 12%; /* Slightly lighter dark gray for cards */
+    --card: 245 20% 10%; /* Dark Obsidian Cards */
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 12%;
+    --popover: 245 20% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 358 85% 55%; /* Brighter UW Red for dark theme */
+    --primary: 267 92% 67%; /* Neon Electric Violet #a855f7 */
     --primary-foreground: 0 0% 100%; 
 
-    --secondary: 0 0% 15%; /* Darker Gray for secondary elements */
+    --secondary: 245 20% 15%; /* Dark secondary elements */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 20%; /* Muted Dark Gray */
-    --muted-foreground: 0 0% 65%;
+    --muted: 245 15% 18%; /* Muted Dark Gray */
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 358 85% 55%; /* Brighter UW Red for dark theme */
-    --accent-foreground: 0 0% 100%;
+    --accent: 38 95% 58%; /* Radiant Amber Gold #fbbf24 */
+    --accent-foreground: 245 25% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 358 85% 55%; /* Brighter UW Red for dark theme ring */
+    --border: 245 15% 18%;
+    --input: 245 15% 18%;
+    --ring: 267 92% 67%; /* Neon Violet ring */
 
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: 267 92% 67%; /* Neon Violet */
+    --chart-2: 38 95% 58%;  /* Radiant Gold */
+    --chart-3: 199 89% 60%; /* Cyan */
+    --chart-4: 330 81% 65%; /* Bright Magenta */
+    --chart-5: 160 70% 50%; /* Teal */
 
-    --sidebar-background: 0 0% 9%;
+    --sidebar-background: 245 20% 6%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 358 85% 55%; /* Brighter UW Red for dark theme sidebar */
+    --sidebar-primary: 267 92% 67%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent: 245 20% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 358 85% 55%; /* Brighter UW Red for dark theme sidebar ring */
+    --sidebar-border: 245 15% 18%;
+    --sidebar-ring: 267 92% 67%;
   }
 }
 
