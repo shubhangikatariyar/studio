@@ -73,7 +73,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row justify-end gap-2 pt-4 border-t border-border/50 mt-auto">
         {project.demoUrl && project.demoUrl !== '#' && (
-          <Button variant="outline" asChild className="w-full sm:w-auto hover:border-primary hover:text-primary transition-all duration-200">
+          <Button variant="outline" asChild className="w-full sm:w-auto shadow-sm">
             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" />{' '}
               {project.demoButtonText || 'View Demo'}
