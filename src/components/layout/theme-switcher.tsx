@@ -56,7 +56,7 @@ export function ThemeSwitcher() {
       size="icon"
       onClick={toggleTheme}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-      className="w-9 h-9" // "small" button
+      className="w-9 h-9 text-foreground hover:text-primary hover:bg-primary/15 transition-all duration-200"
     >
       {theme === 'light' ? (
         <Moon className="h-[1.2rem] w-[1.2rem]" />

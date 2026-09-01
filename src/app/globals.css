@@ -14,40 +14,40 @@
     --popover: 0 0% 100%; /* White */
     --popover-foreground: 240 10% 10%;
 
-    --primary: 267 83% 53%; /* Electric Amethyst Violet #7c3aed */
+    --primary: 38 92% 44%; /* Radiant Honey Amber Gold #c97a06 */
     --primary-foreground: 0 0% 100%; /* White for text on primary */
 
-    --secondary: 260 20% 96%; /* Soft Lilac-Gray Tint #f3f0f9 */
-    --secondary-foreground: 267 83% 40%;
+    --secondary: 38 25% 95%; /* Warm Ivory/Sand Tint */
+    --secondary-foreground: 38 90% 28%;
 
     --muted: 240 5% 94%; /* Muted Gray */
     --muted-foreground: 240 5% 45%; /* Muted Text */
 
-    --accent: 38 92% 48%; /* Amber Gold Accent #d97706 */
+    --accent: 38 92% 44%; /* Amber Gold Accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 267 83% 53%; /* Electric Violet focus ring */
+    --border: 38 20% 88%;
+    --input: 38 20% 88%;
+    --ring: 38 92% 44%; /* Gold focus ring */
 
-    --chart-1: 267 83% 53%; /* Violet */
-    --chart-2: 38 92% 48%;  /* Amber Gold */
+    --chart-1: 38 92% 44%;  /* Gold */
+    --chart-2: 24 95% 53%;  /* Warm Orange */
     --chart-3: 199 89% 48%; /* Tech Cyan */
-    --chart-4: 330 81% 56%; /* Magenta */
+    --chart-4: 267 83% 53%; /* Subtle Violet */
     --chart-5: 160 84% 39%; /* Emerald */
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 99%;
     --sidebar-foreground: 240 10% 10%;
-    --sidebar-primary: 267 83% 53%;
+    --sidebar-primary: 38 92% 44%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 260 20% 96%;
-    --sidebar-accent-foreground: 267 83% 40%;
-    --sidebar-border: 240 6% 90%;
-    --sidebar-ring: 267 83% 53%;
+    --sidebar-accent: 38 25% 95%;
+    --sidebar-accent-foreground: 38 90% 28%;
+    --sidebar-border: 38 20% 88%;
+    --sidebar-ring: 38 92% 44%;
   }
 
   .dark {
@@ -60,16 +60,16 @@
     --popover: 245 20% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 267 92% 67%; /* Neon Electric Violet #a855f7 */
-    --primary-foreground: 0 0% 100%; 
+    --primary: 38 95% 58%; /* Radiant Luminous Gold #fbbf24 */
+    --primary-foreground: 245 25% 10%; /* Deep dark text on bright gold */
 
-    --secondary: 245 20% 15%; /* Dark secondary elements */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 245 20% 14%; /* Dark warm secondary elements */
+    --secondary-foreground: 38 95% 75%;
 
     --muted: 245 15% 18%; /* Muted Dark Gray */
     --muted-foreground: 240 5% 65%;
 
-    --accent: 38 95% 58%; /* Radiant Amber Gold #fbbf24 */
+    --accent: 38 95% 58%; /* Radiant Amber Gold */
     --accent-foreground: 245 25% 10%;
 
     --destructive: 0 62.8% 30.6%;
@@ -77,22 +77,22 @@
 
     --border: 245 15% 18%;
     --input: 245 15% 18%;
-    --ring: 267 92% 67%; /* Neon Violet ring */
+    --ring: 38 95% 58%; /* Radiant Gold ring */
 
-    --chart-1: 267 92% 67%; /* Neon Violet */
-    --chart-2: 38 95% 58%;  /* Radiant Gold */
+    --chart-1: 38 95% 58%;  /* Radiant Gold */
+    --chart-2: 24 95% 60%;  /* Warm Amber */
     --chart-3: 199 89% 60%; /* Cyan */
-    --chart-4: 330 81% 65%; /* Bright Magenta */
+    --chart-4: 267 92% 67%; /* Violet */
     --chart-5: 160 70% 50%; /* Teal */
 
     --sidebar-background: 245 20% 6%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 267 92% 67%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 245 20% 15%;
-    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-primary: 38 95% 58%;
+    --sidebar-primary-foreground: 245 25% 10%;
+    --sidebar-accent: 245 20% 14%;
+    --sidebar-accent-foreground: 38 95% 75%;
     --sidebar-border: 245 15% 18%;
-    --sidebar-ring: 267 92% 67%;
+    --sidebar-ring: 38 95% 58%;
   }
 }
 
