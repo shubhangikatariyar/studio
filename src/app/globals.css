@@ -14,16 +14,16 @@
     --popover: 0 0% 100%; /* White */
     --popover-foreground: 240 10% 12%;
 
-    --primary: 271 81% 53%; /* True Royal Purple #9333ea */
+    --primary: 326 42% 42%; /* Refined Mulberry Plum #8b3a68 */
     --primary-foreground: 0 0% 100%; /* Crisp Pure White */
 
-    --secondary: 270 25% 96%; /* Soft Lilac-Gray Tint */
-    --secondary-foreground: 271 81% 38%;
+    --secondary: 325 20% 96%; /* Soft Blush Lilac Tint */
+    --secondary-foreground: 326 42% 32%;
 
     --muted: 240 6% 94%; /* Muted Gray */
     --muted-foreground: 240 5% 45%; /* Muted Text */
 
-    --accent: 271 81% 53%; /* Royal Purple Accent */
+    --accent: 326 42% 42%; /* Mulberry Plum Accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,9 +31,9 @@
 
     --border: 240 6% 90%;
     --input: 240 6% 90%;
-    --ring: 271 81% 53%; /* Purple focus ring */
+    --ring: 326 42% 42%; /* Focus ring */
 
-    --chart-1: 271 81% 53%; /* Royal Purple */
+    --chart-1: 326 42% 42%; /* Mulberry Plum */
     --chart-2: 45 100% 50%; /* Royal Gold */
     --chart-3: 199 89% 48%; /* Tech Cyan */
     --chart-4: 330 81% 56%; /* Magenta */
@@ -42,12 +42,12 @@
 
     --sidebar-background: 0 0% 99%;
     --sidebar-foreground: 240 10% 12%;
-    --sidebar-primary: 271 81% 53%;
+    --sidebar-primary: 326 42% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 25% 96%;
-    --sidebar-accent-foreground: 271 81% 38%;
+    --sidebar-accent: 325 20% 96%;
+    --sidebar-accent-foreground: 326 42% 32%;
     --sidebar-border: 240 6% 90%;
-    --sidebar-ring: 271 81% 53%;
+    --sidebar-ring: 326 42% 42%;
   }
 
   .dark {
