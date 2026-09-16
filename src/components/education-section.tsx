@@ -7,7 +7,7 @@ const educationData: EducationEntry[] = [
   {
     id: '1',
     university: 'University of Wisconsin, Madison',
-    degree: "Master's in Electrical and Computer Engineering",
+    degree: "Master's in Computer Engineering",
     specialization: 'Machine Learning and Signal Processing',
     dates: 'Aug 2026 - Dec 2027',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Uw-logo.png',
