@@ -1,5 +1,5 @@
 
-import { Linkedin, Github, Download, Twitter, Mail } from 'lucide-react';
+import { Linkedin, Github, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { SocialLink } from '@/types';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -24,11 +24,6 @@ const socialLinks: SocialLink[] = [
   { platform: 'Twitter', url: 'https://x.com/shubhangikat', icon: Twitter, ariaLabel: "Shubhangi Katariyar's Twitter Profile" }, 
 ];
 
-const contactProfileData = {
-  name: 'Shubhangi Katariyar',
-  resumeUrl: `/studio/resume.pdf`,
-};
-
 export function ContactSection() {
   return (
     <section id="contact" aria-labelledby="contact-title" className="py-12 bg-card shadow-lg rounded-lg">
@@ -37,14 +32,6 @@ export function ContactSection() {
           <span role="img" aria-label="Envelope emoji" className="mr-2 text-primary">✉️</span>
           Contact Me
         </h2>
-        <div className="mb-10">
-          <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-            <a href={contactProfileData.resumeUrl} download="Shubhangi_Resume.pdf">
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
-            </a>
-          </Button>
-        </div>
         <div className="flex justify-center space-x-6 mb-8">
           {socialLinks.map((link) => (
             <Tooltip key={link.platform}>

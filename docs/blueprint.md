@@ -4,7 +4,6 @@
 
 - Profile Header: Display profile picture, current role (AI Engineer at TCS), and work experience (3 years).
 - Project Highlights: Highlight three key projects with demos and code links. Ability to add more projects later.
-- Resume Download: Provide a downloadable resume in PDF format.
 - Contact Information: Display contact details (email, LinkedIn, etc.) for recruiters.
 
 ## Style Guidelines:

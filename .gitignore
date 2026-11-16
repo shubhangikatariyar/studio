@@ -45,3 +45,10 @@ public/_auth/*
 firebase.json
 firebase-debug.log
 firestore-debug.log
+
+# resume & CV documents
+*resume*
+*Resume*
+*cv*
+*CV*
+*.pdf
